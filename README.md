@@ -36,9 +36,8 @@ function:
     simple feature
 -   `species` - data frame containing the names of all penguin species
     included in MAPPPD
--   `site_speces` - data frame the name of all known *Pygoscelis* and
-    Emperor penguin breeding sites south of 60 degrees S latitude and
-    which species breed there
+-   `site_species` - data frame linking *Pygoscelis* and Emperor penguin
+    species to their breeding sites in MAPPPD
 -   `articles` - data frame containing citation information specific to
     journal articles whose data are included in MAPPPD
 -   `collections` - data frame containing citation information specific
@@ -55,9 +54,8 @@ function:
     citations in MAPPPD
 -   `mapppd_bib` - `BibEntry` object containing bibliographic
     information for all citations in MAPPPD
--   `penmap` - function that creates leaflet of of all known
-    *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees
-    S latitude
+-   `penmap` - function that creates a leaflet of all known *Pygoscelis*
+    and Emperor penguin breeding sites south of 60 degrees S latitude
 
 Installation
 ------------

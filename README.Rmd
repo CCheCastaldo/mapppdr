@@ -20,7 +20,7 @@ The package contains 12 data frames, 1 `BibEntry` object, and 1 function:
 * `sites` -  data frame containing the name and location of all known *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees S latitude and all Antarctic Site Inventory (ASI) penguin/seabird census sites
 * `sites_sf` - `sites` data frame with location stored instead as a simple feature
 * `species` -  data frame containing the names of all penguin species included in MAPPPD
-* `site_speces` - data frame the name of all known *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees S latitude and which species breed there
+* `site_species` - data frame linking *Pygoscelis* and Emperor penguin species to their breeding sites in MAPPPD
 * `articles` - data frame containing citation information specific to journal articles whose data are included in MAPPPD
 * `collections` - data frame containing citation information specific to books or conference proceedings containing data included in MAPPPD
 * `incollections` - data frame containing citation information specific to book chapters or conference papers whose data are included in MAPPPD
@@ -28,7 +28,7 @@ The package contains 12 data frames, 1 `BibEntry` object, and 1 function:
 * `persons` - data frame containing bibliographic identifiers for all people who contributed data to MAPPPD
 * `citation_persons` - data frame linking contributors to their citations in MAPPPD
 * `mapppd_bib` - `BibEntry` object containing bibliographic information for all citations in MAPPPD
-* `penmap` -  function that creates leaflet of of all known *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees S latitude
+* `penmap` -  function that creates a leaflet of all known *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees S latitude
 
 ## Installation
 
