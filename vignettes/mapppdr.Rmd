@@ -65,7 +65,8 @@ You can also use spatial information to subset count data. This is quite easy us
 
 ```{r }
 ACUN_area_counts <- sites_sf %>%
-  mutate(ACUN_distance = as.numeric(sf::st_distance(sites_sf, sites_sf %>% dplyr::filter(site_id == "ACUN")))) %>%
+  mutate(ACUN_distance = as.numeric(sf::st_distance(sites_sf, sites_sf %>% 
+    dplyr::filter(site_id == "ACUN")))) %>%
   dplyr::filter(ACUN_distance <= 10000) %>%
   dplyr::select(site_id) %>%
   inner_join(penguin_obs, by = "site_id")

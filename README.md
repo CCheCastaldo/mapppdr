@@ -62,10 +62,10 @@ function:
 Installation
 ------------
 
-You can install the latest version (0.1.1.1) from Github with:
+You can install the latest version (0.1.1.2) from Github with:
 
     install.packages('devtools')
-    devtools::install_github('cchecastaldo/mapppdr', build_vignettes = TRUE)
+    devtools::install_github('CCheCastaldo/mapppdr', build_vignettes = TRUE)
 
 ### Vignette
 
@@ -148,7 +148,8 @@ instance, the following code selects counts from the 22 sites within 100
 km of ACUN (including ACUN itself):
 
     ACUN_area_counts <- sites_sf %>%
-      mutate(ACUN_distance = as.numeric(sf::st_distance(sites_sf, sites_sf %>% dplyr::filter(site_id == "ACUN")))) %>%
+      mutate(ACUN_distance = as.numeric(sf::st_distance(sites_sf, sites_sf %>% 
+        dplyr::filter(site_id == "ACUN")))) %>%
       dplyr::filter(ACUN_distance <= 10000) %>%
       dplyr::select(site_id) %>%
       inner_join(penguin_obs, by = "site_id")

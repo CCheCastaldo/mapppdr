@@ -36,7 +36,7 @@ You can install the  latest version (0.1.1.2) from Github with:
 
 ```{r, eval = FALSE}
 install.packages('devtools')
-devtools::install_github('cchecastaldo/mapppdr', build_vignettes = TRUE)
+devtools::install_github('CCheCastaldo/mapppdr', build_vignettes = TRUE)
 ```
 
 
@@ -83,7 +83,8 @@ You can also use spatial information to subset count data. This is quite easy us
 
 ```{r }
 ACUN_area_counts <- sites_sf %>%
-  mutate(ACUN_distance = as.numeric(sf::st_distance(sites_sf, sites_sf %>% dplyr::filter(site_id == "ACUN")))) %>%
+  mutate(ACUN_distance = as.numeric(sf::st_distance(sites_sf, sites_sf %>% 
+    dplyr::filter(site_id == "ACUN")))) %>%
   dplyr::filter(ACUN_distance <= 10000) %>%
   dplyr::select(site_id) %>%
   inner_join(penguin_obs, by = "site_id")
@@ -118,7 +119,7 @@ RefManageR::WriteBib(out, file = "~/Desktop/Coria_citations.bib")
 print(out, .opts = list(bib.style = "authoryear", style = "markdown"))
 ```
 
-```{r ref.label = 'chunk1', results = 'asis', echo = F}
+```{r ref.label = 'chunk1', results = 'asis', echo = FALSE}
 
 ```
 
