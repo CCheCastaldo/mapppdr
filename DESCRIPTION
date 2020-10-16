@@ -1,6 +1,6 @@
 Package: mapppdr
 Title: Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD)
-Version: 0.1.1.0
+Version: 0.1.1.1
 Authors@R: 
     person(given = "Christian",
            family = "Che-Castaldo",
