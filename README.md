@@ -16,8 +16,8 @@ data on emperor, gentoo, Adélie and chinstrap penguins in Antarctica. A
 front end web interface located at
 [www.penguinmap.com](http://www.penguinmap.com) provides free and ready
 access to the most recent count data. The `mapppdr` package makes the
-MAPPPD database tables avilable as data frames and simple features
-objects, where appropriate, as well as providing a simple tool for
+MAPPPD database tables available as data frames (one with simple
+features), the MAPPPD BibTeX citation data, and a function for
 visualizing breeding colony locations using `leaflet`.
 
 The package contains 12 data frames, 1 `BibEntry` object, and 1
@@ -32,7 +32,8 @@ function:
     *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees
     S latitude and all Antarctic Site Inventory (ASI) penguin/seabird
     census sites
--   `sites_sf` - simple features version of `sites`
+-   `sites_sf` - `sites` data frame with location stored instead as a
+    simple feature
 -   `species` - data frame containing the names of all penguin species
     included in MAPPPD
 -   `site_speces` - data frame the name of all known *Pygoscelis* and
@@ -54,7 +55,7 @@ function:
     citations in MAPPPD
 -   `mapppd_bib` - `BibEntry` object containing bibliographic
     information for all citations in MAPPPD
--   `penmap` - Function that creates leaflet of of all known
+-   `penmap` - function that creates leaflet of of all known
     *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees
     S latitude
 
@@ -324,7 +325,9 @@ button (located to the right of the broomstick icon).
 
     penmap("ADPE")
 
+<p align="center">
 <img src="vignettes/leaflet.png" width="50%" style="display: block; margin: auto;" />
+</p>
 
 <br>
 

@@ -1,10 +1,10 @@
 #' Name and location of MAPPPD seabird breeding sites
 #'
-#' A simple features dataset containing the name and location of all known Pygoscelis
-#' and Emperor penguin breeding sites south of 60 degrees S latitude
-#' and all Antarctic Site Inventory (ASI) penguin/seabird census sites.
+#' A dataset containing the name and location, stored as a simple feature, of all known Pygoscelis
+#' and Emperor penguin breeding sites south of 60 degrees S latitude and all Antarctic Site Inventory
+#' (ASI) penguin/seabird census sites.
 #'
-#' @format A simple features data frame with 748 rows and 5 variables:
+#' @format A data frame with 748 rows and 5 variables:
 #' \describe{
 #'   \item{site_id}{unique identifier for each site}
 #'   \item{site_name}{site name and/or description}
