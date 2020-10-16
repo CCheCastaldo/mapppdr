@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 The Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) is a web-based, open access, decision-support tool designed to assist scientists, non-governmental organizations and policy-makers working to meet the management objectives as set forth by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) and other components of the Antarctic Treaty System (ATS). The MAPPPD database includes all publicly available published and unpublished count data on emperor, gentoo, Adélie and chinstrap penguins in Antarctica. A front end web interface located at [www.penguinmap.com](http://www.penguinmap.com) provides free and ready access to the most recent count data. The `mapppdr` package makes the MAPPPD database tables avilable as data frames and simple features objects, where appropriate, as well as providing a simple tool for visualizing breeding colony locations using `leaflet`.
 
-The package contains 12 data frames and 1 function:
+The package contains 12 data frames, 1 `BibEntry` object, and 1 function:
 
 * `penguin_obs` - data frame containing the all publicly available *Pygoscelis* and Emperor penguin counts and presence-absence data at breeding sites south of 60 degrees S latitude
 * `citations` -  data frame containing bibliographic identifiers for all citations referenced in MAPPPD
@@ -26,17 +26,17 @@ The package contains 12 data frames and 1 function:
 * `incollections` - data frame containing citation information specific to book chapters or conference papers whose data are included in MAPPPD
 * `unpublished` - data frame containing citation information specific to unpublished data included in MAPPPD
 * `persons` - data frame containing bibliographic identifiers for all people who contributed data to MAPPPD
-* `citation_persons` - data frame linking contributors to their citations referenced in MAPPPD
-* `mapppd_bib` - bibliographic information for all citation referenced in MAPPPD
+* `citation_persons` - data frame linking contributors to their citations in MAPPPD
+* `mapppd_bib` - `BibEntry` object containing bibliographic information for all citations in MAPPPD
 * `penmap` -  Function that creates leaflet of of all known *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees S latitude
 
 ## Installation
 
-You can install the  latest version from Github with:
+You can install the  latest version (0.1.1.1) from Github with:
 
 ```{r, eval = FALSE}
 install.packages('devtools')
-devtools::install_github('caseyyoungflesh/MCMCvis', build_vignettes = TRUE)
+devtools::install_github('cchecastaldo/mapppdr', build_vignettes = TRUE)
 ```
 
 

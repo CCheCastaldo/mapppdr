@@ -20,7 +20,8 @@ MAPPPD database tables avilable as data frames and simple features
 objects, where appropriate, as well as providing a simple tool for
 visualizing breeding colony locations using `leaflet`.
 
-The package contains 12 data frames and 1 function:
+The package contains 12 data frames, 1 `BibEntry` object, and 1
+function:
 
 -   `penguin_obs` - data frame containing the all publicly available
     *Pygoscelis* and Emperor penguin counts and presence-absence data at
@@ -50,9 +51,9 @@ The package contains 12 data frames and 1 function:
 -   `persons` - data frame containing bibliographic identifiers for all
     people who contributed data to MAPPPD
 -   `citation_persons` - data frame linking contributors to their
-    citations referenced in MAPPPD
--   `mapppd_bib` - bibliographic information for all citation referenced
-    in MAPPPD
+    citations in MAPPPD
+-   `mapppd_bib` - `BibEntry` object containing bibliographic
+    information for all citations in MAPPPD
 -   `penmap` - Function that creates leaflet of of all known
     *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees
     S latitude
@@ -60,10 +61,10 @@ The package contains 12 data frames and 1 function:
 Installation
 ------------
 
-You can install the latest version from Github with:
+You can install the latest version (0.1.1.1) from Github with:
 
     install.packages('devtools')
-    devtools::install_github('caseyyoungflesh/MCMCvis', build_vignettes = TRUE)
+    devtools::install_github('cchecastaldo/mapppdr', build_vignettes = TRUE)
 
 ### Vignette
 
