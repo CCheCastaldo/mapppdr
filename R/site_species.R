@@ -1,7 +1,7 @@
-#' Name of MAPPPD penguin breeding sites
+#' Name and species breeding at MAPPPD penguin breeding sites
 #'
-#' A dataset containing the name of all known Pygoscelis and Emperor penguin breeding sites south
-#' of 60 degrees S latitude and what species breed there.
+#' A dataset data frame the name of all known Pygoscelis and Emperor penguin breeding sites south of
+#' 60 degrees S latitude and which species breed there.
 #'
 #' @format A data frame with 704 rows and 2 variables:
 #' \describe{

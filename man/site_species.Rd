@@ -3,7 +3,7 @@
 \docType{data}
 \name{site_species}
 \alias{site_species}
-\title{Name of MAPPPD penguin breeding sites}
+\title{Name and species breeding at MAPPPD penguin breeding sites}
 \format{
 A data frame with 704 rows and 2 variables:
 \describe{
@@ -20,8 +20,8 @@ A data frame with 704 rows and 2 variables:
 site_species
 }
 \description{
-A dataset containing the name of all known Pygoscelis and Emperor penguin breeding sites south
-of 60 degrees S latitude and what species breed there.
+A dataset data frame the name of all known Pygoscelis and Emperor penguin breeding sites south of
+60 degrees S latitude and which species breed there.
 }
 \section{References}{
 

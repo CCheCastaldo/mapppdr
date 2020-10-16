@@ -12,7 +12,7 @@ penmap(species_map = c("ADPE", "GEPE", "CHPE", "EMPE"))
 Default \code{'c("ADPE", "GDPE", "CHPE", "EMPE")'} returns breeding sites for all penguin species in MAPPPD.}
 }
 \description{
-Creates leaflet of of all known Pygoscelis and Emperor penguin breeding sites south of 60 degrees S latitude recorded in the Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) database.
+Creates leaflet of of all known Pygoscelis and Emperor penguin breeding sites south of 60 degrees S latitude.
 }
 \section{Details}{
 

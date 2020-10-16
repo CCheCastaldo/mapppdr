@@ -1,6 +1,6 @@
 #' Create leaflet of penguin breeding sites
 #'
-#' Creates leaflet of of all known Pygoscelis and Emperor penguin breeding sites south of 60 degrees S latitude recorded in the Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) database.
+#' Creates leaflet of of all known Pygoscelis and Emperor penguin breeding sites south of 60 degrees S latitude.
 #'
 #' @param species_map character vector of penguin species to include on map. Species are referenced using the species_id codes found in the species table.
 #'
