@@ -1,13 +1,13 @@
 Package: mapppdr
 Title: Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD)
-Version: 0.1.0.1
+Version: 0.1.1.0
 Authors@R: 
     person(given = "Christian",
            family = "Che-Castaldo",
            role = c("aut", "cre"),
            email = "christian.che-castaldo@stonybrook.edu",
            comment = c(ORCID = "0000-0002-7670-2178"))
-Description: The Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) is a web-based, open access, decision-support tool designed to assist scientists, non-governmental organizations and policy-makers working to meet the management objectives as set forth by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) and other components of the Antarctic Treaty System (ATS).The database underlying MAPPPD includes all publicly available (published and unpublished) count data on emperor, gentoo, Adélie and chinstrap penguins in Antarctica. A front end web interface located at www.penguinmap.com provides free and ready access to the most recent count data. This package provides  the MAPPPD database tables as data frames and simple features objects, where appropriate. In addition,  the mapppdr package also provides the bibliographic information for all counts in MAPPPD and a function for easily visualizing site locations using leaflet.
+Description: The Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) is a web-based, open access, decision-support tool designed to assist scientists, non-governmental organizations and policy-makers working to meet the management objectives as set forth by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) and other components of the Antarctic Treaty System (ATS). The MAPPPD database includes all publicly available published and unpublished count data on emperor, gentoo, Adélie and chinstrap penguins in Antarctica. A front end web interface located at www.penguinmap.com provides free and ready access to the most recent count data. The `mapppdr` package makes the MAPPPD database tables avilable as data frames and simple features objects, where appropriate, as well as providing a simple tool for visualizing breeding colony locations using `leaflet`.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
