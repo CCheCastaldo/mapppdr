@@ -21,9 +21,11 @@ library(sf)
 library(htmlwidgets)
 ```
 
-### Background
+### MAPPPD in R
 
-The Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) is a web-based, open access, decision-support tool designed to assist scientists, non-governmental organizations and policy-makers working to meet the management objectives as set forth by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) and other components of the Antarctic Treaty System (ATS) (Humphries et al. , 2017). The database underlying MAPPPD includes all publicly available (published and unpublished) count data on emperor, gentoo, Adélie and chinstrap penguins in Antarctica. A front end web interface located at [www.penguinmap.com](http://www.penguinmap.com/) provides free and ready access to the most recent count data. The `mapppdr` package provides the MAPPPD database tables as data frames and simple features objects, where appropriate.
+<a href="http://www.penguinmap.com"><img align="right" src="mapppd_logo.png" style="border:solid #FFFFFF 2px;"/></a>
+
+The Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) is a web-based, open access, decision-support tool designed to assist scientists, non-governmental organizations and policy-makers working to meet the management objectives as set forth by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) and other components of the Antarctic Treaty System (ATS). The MAPPPD database includes all publicly available published and unpublished count data on emperor, gentoo, Adélie and chinstrap penguins in Antarctica. A front end web interface located at [www.penguinmap.com](http://www.penguinmap.com) provides free and ready access to the most recent count data. The `mapppdr` package makes the MAPPPD database tables avilable as data frames and simple features objects, where appropriate, as well as providing a simple tool for visualizing breeding colony locations using `leaflet`.
 
 <br>
 
@@ -75,7 +77,7 @@ head(ACUN_area_counts)
 
 ### Bibliographic Data
 
-A core MAPPPD project goal is to reliably report the observation metadata, and in this regard we work very hard to make sure all data in MAPPPD is properly cited and this bibliographic information is easily available to end-users. One challenge with the MAPPPD bibliography is that fact that many of citations contain special characters (accents, umlauts, etc.). <u>People who contribute data to MAPPPD deserve to have their names spelled correctly.</u> To accomplish this we allow the bibliographic data to retain accents through UTF-8 special. Bibliographic data in `mapppdr` is stored in a set of data frames that allow for easy subsetting of the actual observation data using the `citekey` field. For instance. the following code returns all journal articles containing penguin counts authored by Néstor R. Coria, before subsetting `penguin_obs` for the counts themselves.
+A core MAPPPD project goal is to reliably report the observation metadata, and in this regard we work very hard to make sure all data in MAPPPD is properly cited and this bibliographic information is easily available to end-users. One challenge with the MAPPPD bibliography is that fact that many of citations contain special characters (accents, umlauts, etc.). <u>People who contribute data to MAPPPD deserve to have their names spelled correctly.</u> To accomplish this we allow the bibliographic data to retain accents through UTF-8 special. Bibliographic data in `mapppdr` is stored in a set of data frames that allow for easy subsetting of the actual observation data using the `citekey` field. For instance. the following code returns all citations containing penguin counts where Néstor R. Coria is an author, before subsetting `penguin_obs` for the counts themselves.
 
 ```{r }
 coria_citations <- persons %>%
@@ -116,9 +118,11 @@ The following code will create an Adélie only leaflet, which you can then open 
 penmap("ADPE")
 ```
 
-```{r, out.width = "100%"}
+```{r, out.width = "50%", fig.align = 'center'}
 knitr::include_graphics("leaflet.png")
 ```
+
+<br>
 
 You can also export and share leaflets quite easily. For instance, the following code will save the Adélie only leaflet to your Desktop. You can then share this `html` file, which can be opened directly in a web browser.
 
