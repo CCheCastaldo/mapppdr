@@ -20,7 +20,7 @@ A data frame with 588 rows and 4 variables:
 citation_persons
 }
 \description{
-A dataset linking contributors to their citations referenced in MAPPPD.
+A dataset linking contributors to their citations in MAPPPD.
 }
 \section{References}{
 

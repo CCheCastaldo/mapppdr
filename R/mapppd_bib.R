@@ -1,6 +1,6 @@
 #' Bibliography for citations referenced in MAPPPD
 #'
-#' Bibliographic information for all citation referenced in MAPPPD.
+#' Bibliographic information for all citation in MAPPPD.
 #'
 #' @source \url{http://www.penguinmap.com/}
 #'

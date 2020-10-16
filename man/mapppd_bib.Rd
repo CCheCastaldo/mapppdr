@@ -14,7 +14,7 @@ An object of class \code{BibEntry} (inherits from \code{bibentry}) of length 187
 mapppd_bib
 }
 \description{
-Bibliographic information for all citation referenced in MAPPPD.
+Bibliographic information for all citation in MAPPPD.
 }
 \section{References}{
 
