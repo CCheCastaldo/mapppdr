@@ -12,7 +12,7 @@
 #'   \item{number}{journal number, if available}
 #'   \item{start_page}{starting page of article}
 #'   \item{end_page}{ending page of article}
-#'   \item{doi}{article doi, if avilable}
+#'   \item{doi}{article doi, if available}
 #'   \item{url}{url link to article, if available}
 #'   \item{early_access}{boolean indicator that is TRUE if the article is currently early access and FALSE otherwise}
 #'
