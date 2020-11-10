@@ -3,7 +3,7 @@ mapppdr
 
 ### MAPPPD in R
 
-<a href="http://www.penguinmap.com"><img align="right" src="mapppd_logo.png" style="border:solid #FFFFFF 2px;width:175px;height:175px;"/></a>
+<a href="http://www.penguinmap.com"><img align="right" src="vignettes/mapppd_logo.png" style="border:solid #FFFFFF 2px;width:175px;height:175px;"/></a>
 
 The Mapping Application for Penguin Populations and Projected Dynamics
 (MAPPPD) is a web-based, open access, decision-support tool designed to
