@@ -3,7 +3,7 @@ mapppdr
 
 ### MAPPPD in R
 
-<a href="http://www.penguinmap.com"><img align="right" src="vignettes/mapppd_logo.png" style="border:solid #FFFFFF 2px;width:175px;height:175px;"/></a>
+<a href="http://www.penguinmap.com"><img align="right" src="vignettes/mapppd_logo.png" style="border:solid #FFFFFF 2px;width:75px;height:75px;"/></a>
 
 The Mapping Application for Penguin Populations and Projected Dynamics
 (MAPPPD) is a web-based, open access, decision-support tool designed to
@@ -38,8 +38,8 @@ function:
     *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees
     S latitude and all Antarctic Site Inventory (ASI) penguin/seabird
     census sites
--   `sites_sf` - `sites` data frame with locations stored as a simple
-    feature
+-   `sites_sf` - `sites` data frame with locations stored as simple
+    features POINT geometries
 -   `species` - data frame containing the names of all penguin species
     included in MAPPPD
 -   `site_species` - data frame linking *Pygoscelis* and Emperor penguin
