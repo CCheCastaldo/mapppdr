@@ -1,7 +1,7 @@
 #' Count and presence/absence observations included in MAPPPD
 #'
 #' A dataset containing the all publicly available Pygoscelis and Emperor penguin
-#' counts and presence-absence data at breeding sites south of 60 degrees S latitude.
+#' counts and presence-absence data at breeding sites south of 60 degrees S latitude contained within MAPPPD.
 #'
 #' @format A data frame with 4052 rows and 14 variables:
 #' \describe{
@@ -19,13 +19,13 @@
 #'   \item{count}{count of species type (adults, nests, or chicks) observed at the site, can be NA if record is presence/absence record only}
 #'   \item{accuracy}{accuracy scores were assigned on a 5 point scale (usually by the observer) that penguin census counters traditionally use to represent
 #'   count precision (see Croxall and Kirkwood, 1979)}
-#'   \item{vantage}{vantage point of observation, can be aerial (direct count using an aerial platform), aerial photo (count of a photograph taken from an aerial platform), ground (direct count by an individual on the ground), ground photo (count of a photograph taken from a position on the ground), landsat satellite, offshore vessel, sentinel satellite, uav (count of a photograph taken from an unmanned aerial vehicle), or vhr (population estimate based on very-high [< 5 m resolution] commercial satellite imagery)}
+#'   \item{vantage}{vantage point of observation, can be aerial (direct count using an aerial platform), aerial photo (count of a photograph taken from an aerial platform), ground (direct count by an individual on the ground), ground photo (count of a photograph taken from a position on the ground), landsat satellite, offshore vessel, sentinel satellite, uav (count of a photograph taken from an unmanned aerial vehicle), or vhr (population estimate based on very-high, < 5 m resolution, commercial satellite imagery)}
 #' }
 #' @source \url{http://www.penguinmap.com/}
 #'
 #' @section References:
 #' Croxall, J. P. and E. D. Kirkwood. (1979). The distribution of penguins on the Antarctic Peninsula and islands of the Scotia Sea. British Antarctic Survey, Cambridge, United Kingdom
 #'
-#' Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". _Polar Record_ 53(2): 160-166, https://doi.org/10.1017/S0032247417000055
+#' Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". _Polar Record_ 53(2): 160-166, \url{https://doi.org/10.1017/S0032247417000055}
 #'
 "penguin_obs"
