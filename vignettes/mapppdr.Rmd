@@ -1,6 +1,6 @@
 ---
 title: "mapppdr"
-author: "Christian Che-Castaldo"
+author: "Christian Che-Castaldo and Heather J. Lynch"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{mapppdr}
@@ -25,13 +25,13 @@ library(htmlwidgets)
 
 <a href="http://www.penguinmap.com"><img align="right" src="mapppd_logo.png" style="border:solid #FFFFFF 2px;"/></a>
 
-The Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) is a web-based, open access, decision-support tool designed to assist scientists, non-governmental organizations and policy-makers working to meet the management objectives as set forth by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) and other components of the Antarctic Treaty System (ATS). The MAPPPD database includes all publicly available published and unpublished count data on emperor, gentoo, Adélie and chinstrap penguins in Antarctica. A front end web interface located at [www.penguinmap.com](http://www.penguinmap.com) provides free and ready access to the most recent count data. The `mapppdr` package makes the MAPPPD database tables available as data frames (one with simple features), the MAPPPD BibTeX citation data, and a function for visualizing breeding colony locations using `leaflet`.
+The Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) is a web-based, open access, decision-support tool designed to assist scientists, non-governmental organizations and policy-makers working to meet the management objectives as set forth by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) and other components of the Antarctic Treaty System (ATS). The MAPPPD database, described in Humphries et al. (2017), includes all publicly available published and unpublished count data on emperor, gentoo, Adélie and chinstrap penguins in Antarctica. A front end web interface located at [www.penguinmap.com](http://www.penguinmap.com) provides free and ready access to count data alongside population models that infer abundance in missing data and allow for straightforward aggregation across multiple populations (see Che-Castaldo et al. 2017). The `mapppdr` package makes the MAPPPD database tables available as data frames (one with simple features), the MAPPPD BibTeX citation data, and a function for visualizing breeding colony locations using `leaflet`. The `mapppdr` package will always be updated before changes are reflected on the web interface at penguinmap.com and should be considered the most up-to-date database available on the distribution and abundance of Antarctic penguins. 
 
 <br>
 
 ### R packages
 
-Interacting with `mapppdr` is easily done using the following R packages / collections of packages. The first three (`tidyverse`, `RefManageR`, and `sf`) are for manipulating the MAPPPD data, while `htmlwidgets` is useful for exporting penguin map leaflets (described below).
+`mapppdr` has been designed as a lightweight interface using well tested and easily available packages for databases and mapping. The first three (`tidyverse`, `RefManageR`, and `sf`) are for manipulating the MAPPPD database, while `htmlwidgets` is useful for exporting penguin map leaflets (described below).
 
 ```{r, eval = FALSE}
 library(tidyverse)
@@ -51,7 +51,7 @@ data(penguin_obs)
 head(penguin_obs)
 ```
 
-It is easy to subset the data in various ways using the tidyverse. For example, the following code returns all the chinstrap nest counts in CCAMLR Sub area 48.2 from 1990 - 2000:
+It is easy to subset the data using tidyverse functions. For example, the following code returns all the chinstrap nest counts in CCAMLR Sub area 48.2 from 1990 - 2000:
 
 ```{r }
 chinstrap_counts <- penguin_obs %>%
@@ -61,7 +61,7 @@ chinstrap_counts <- penguin_obs %>%
 head(chinstrap_counts)
 ```
 
-You can also use spatial information to subset count data. This is quite easy using the `sf` [package tools](https://github.com/rstudio/cheatsheets/blob/master/sf.pdf). For instance, the following code selects counts from the 22 sites within 100 km of ACUN (including ACUN itself):
+You can also use spatial information to subset count data using the `sf` [package tools](https://github.com/rstudio/cheatsheets/blob/master/sf.pdf). For example, the following code selects counts from the 22 sites within 100 km of ACUN (including ACUN itself):
 
 ```{r }
 ACUN_area_counts <- sites_sf %>%
@@ -78,7 +78,7 @@ head(ACUN_area_counts)
 
 ### Bibliographic Data
 
-A core MAPPPD project goal is to reliably report the observation metadata, and in this regard we work very hard to make sure all data in MAPPPD is properly cited and this bibliographic information is easily available to end-users. One challenge with the MAPPPD bibliography is that fact that many of citations contain special characters (accents, umlauts, etc.). <u>People who contribute data to MAPPPD deserve to have their names spelled correctly.</u> To accomplish this we allow the bibliographic data to retain accents through UTF-8 special. Bibliographic data in `mapppdr` is stored in a set of data frames that allow for easy subsetting of the actual observation data using the `citekey` field. For instance. the following code returns all citations containing penguin counts where Néstor R. Coria is an author, before subsetting `penguin_obs` for the counts themselves.
+A core MAPPPD project goal is to reliably report the observation metadata, and in this regard we work very hard to make sure all data in MAPPPD is properly cited and original data sources made easily available to end-users. One challenge with the MAPPPD bibliography is that fact that many of citations contain special characters (accents, umlauts, etc.). <u>People who contribute data to MAPPPD deserve to have their names spelled correctly.</u> To accomplish this we allow the bibliographic data to retain accents through UTF-8 special. Bibliographic data in `mapppdr` is stored in a set of data frames that allow for easy subsetting of the actual observation data using the `citekey` field. For instance. the following code returns all citations containing penguin counts where Néstor R. Coria is an author, before subsetting `penguin_obs` for the counts themselves.
 
 ```{r }
 coria_citations <- persons %>%
@@ -111,9 +111,9 @@ print(out, .opts = list(bib.style = "authoryear", style = "markdown"))
 
 ### Penguin Map Leaflet
 
-The function `penmap` allows for quick visualizations of the emperor, gentoo, Adélie and chinstrap penguins breeding sites in Antarctica using leaflet. The function takes a single argument, `species_map`, which is just the list of species (using their species_id codes) whose sites you wish to display on the map. These species are listed as a character vector, whose default is all four species. Colonies are clustered but as you zoom in (either by direct zooming or by clicking on colony clusters), individual sites appear as blue circles. Clicking on circles will reveal the site code, name, and what penguin species are breeding there. You can click on the globe button in the top left (directly below the zoom buttons) to zoom back and and recenter the map. Sometimes, sites are so close to another that resolving a cluster will set the zoom to maximum, potentially obscuring other colonies nearby. To prevent this you can lock and unlock the clusters by clicking on the button below the globe button. Locking clusters will cause sites to fan out in a circle around the cluster but at the current zoom level when clicked. You can disable this behavior by clicking on this button again. The map provides several helpful layers. These include the CCAMLR Statistical Areas and Divisions and Marine Protected Areas, the Antarctic Coastline (all exported from the `CCCAMLRGIS` R package) and the Landsat Image Mosaic Of Antarctica (LIMA) (Bindschadler et al. 2008) WMS tiles hosted by the [Polar Geospatial Center](https://www.pgc.umn.edu).
+The function `penmap` allows for quick visualizations of the emperor, gentoo, Adélie and chinstrap penguins breeding sites in Antarctica using leaflet. The function takes a single argument, `species_map`, which is just the list of species (using their species_id codes) whose sites you wish to display on the map. These species are listed as a character vector, whose default is all four species. Zoomed out, colony clusters are identified. Zooming in (either by direct zooming or by clicking on colony clusters) reveals individual sites as blue circles. Clicking on circles will reveal the site code, name, and the species breeding at that site. Clicking the globe button in the top left (directly below the zoom buttons) will reset the zoom to the pan-Antarctic scale and recenter the map. Sometimes, sites are so close to another that resolving a cluster will set the zoom to maximum, potentially obscuring other colonies nearby. To prevent this, you can lock and unlock the clusters by clicking on the button below the globe button. Locking clusters will cause sites to fan out in a circle around the cluster but at the current zoom level when clicked. You can disable this behavior by clicking on this button again. The map provides several helpful layers. These include the CCAMLR Statistical Areas and Divisions and Marine Protected Areas, the Antarctic Coastline (all exported from the `CCAMLRGIS` R package) and the Landsat Image Mosaic Of Antarctica (LIMA) (Bindschadler et al. 2008) WMS tiles hosted by the [Polar Geospatial Center](https://www.pgc.umn.edu).
 
-The following code will create an Adélie only leaflet, which you can then open in a browser by clicking on the Show in New Window Viewer button (located to the right of the broomstick icon).
+The following code will create an Adélie-only leaflet map, which you can then open in a browser by clicking on the Show in New Window Viewer button (located to the right of the broomstick icon).
 
 ```{r, eval = FALSE}
 penmap("ADPE")
@@ -125,7 +125,7 @@ knitr::include_graphics("leaflet.png")
 
 <br>
 
-You can also export and share leaflets quite easily. For instance, the following code will save the Adélie only leaflet to your Desktop. You can then share this `html` file, which can be opened directly in a web browser.
+You can also export and share leaflet maps quite easily. For instance, the following code will save the Adélie-only leaflet map to your Desktop. You can then share this `html` file, which can be opened directly in a web browser.
 
 ```{r, eval = FALSE}
 htmlwidgets::saveWidget(penmap("ADPE"), file = "~/Desktop/ADPE_map.html")
@@ -135,7 +135,9 @@ htmlwidgets::saveWidget(penmap("ADPE"), file = "~/Desktop/ADPE_map.html")
 
 ### Citations
 
-Bindschadler, R., P. Vornberger, A. Fleming, A. Fox, J. Mullins, D. Binnie, S. J. Paulsen, B. Granneman, and . Gorodetzky. (2008). "The Landsat image mosaic of Antarctica". _Remote Sensing of Environment_ 112(12): 4214-4226, https://doi.org/10.1016/j.rse.2008.07.006.
+Bindschadler, R., P. Vornberger, A. Fleming, A. Fox, J. Mullins, D. Binnie, S. J. Paulsen, B. Granneman, and D. Gorodetzky. (2008). "The Landsat image mosaic of Antarctica". _Remote Sensing of Environment_ 112(12): 4214-4226, https://doi.org/10.1016/j.rse.2008.07.006.
+
+Che-Castaldo, C., S. Jenouvrier, C. Youngflesh, K. Shoemaker, G. Humphries, P. McDowall, L. Landrum, M. Holland, Y. Li, R. Ji, and H.J. Lynch. (2017). "Pan-Antarctic analysis aggregating spatial estimates of Adélie penguin abundance reveals robust dynamics despite stochastic noise". _Nature Communications_ 8: 832, https://doi.org/10.1038/s41467-017-00890-0.
 
 Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". _Polar Record_ 53(2): 160-166, https://doi.org/10.1017/S0032247417000055
 
