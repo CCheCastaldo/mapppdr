@@ -9,9 +9,9 @@ A data frame with 40 rows and 8 variables:
 \describe{
 \item{citekey}{unique identifier for each citation}
 \item{title}{report title (may be title for specific chapter in a report)}
-\item{institution}{institution which publishes report}
-\item{type}{report type or name of third paper who prepared the report for the institution, if either is applicable}
-\item{number}{unqiue report identifier as designated by the institution}
+\item{institution}{institution that publishes report}
+\item{type}{report type or name of third party who prepared the report for the institution, if either is applicable}
+\item{number}{unique report identifier as designated by the institution}
 \item{city}{publisher city}
 \item{country}{publisher country}
 \item{url}{url link to report, if available}
@@ -29,7 +29,7 @@ whose data are included in MAPPPD.
 }
 \section{References}{
 
-Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". \emph{Polar Record} 53(2): 160-166, https://doi.org/10.1017/S0032247417000055
+Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". \emph{Polar Record} 53(2): 160-166,  \url{https://doi.org/10.1017/S0032247417000055}
 }
 
 \keyword{datasets}

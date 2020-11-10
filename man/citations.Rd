@@ -8,7 +8,7 @@
 A data frame with 187 rows and 3 variables:
 \describe{
 \item{citekey}{unique identifier for each citation}
-\item{bibtype}{citation type}
+\item{bibtype}{citation type, can be article (for journal articles), book, book chapter, conference paper, personal communication, report (for unpublished technical reports), or unpublished (for unpublished datasets, monographs, reports, supplements, theses, etc.). }
 \item{year}{citation year}
 }
 }
@@ -24,7 +24,7 @@ referenced in MAPPPD.
 }
 \section{References}{
 
-Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". \emph{Polar Record} 53(2): 160-166, https://doi.org/10.1017/S0032247417000055
+Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". \emph{Polar Record} 53(2): 160-166,  \url{https://doi.org/10.1017/S0032247417000055}
 }
 
 \keyword{datasets}
