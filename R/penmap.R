@@ -10,7 +10,7 @@
 #' \code{species_id} argument must be a character vector.
 #'
 #' @section Notes:
-#' The map provides several helpful layers. These include the CCAMLR Statistical Areas and Divisions and Marine Protected Areas, the Antarctic Coastline (all exported from the `CCCAMLRGIS` R package) and the Landsat Image Mosaic Of Antarctica (LIMA) (Bindschadler et al. 2008) WMS tiles hosted by the [Polar Geospatial Center](https://www.pgc.umn.edu).
+#' The map provides several helpful layers. These include the CCAMLR Statistical Areas and Divisions and Marine Protected Areas, the Antarctic Coastline (all exported from the `CCAMLRGIS` R package) and the Landsat Image Mosaic Of Antarctica (LIMA) (Bindschadler et al. 2008) WMS tiles hosted by the [Polar Geospatial Center](https://www.pgc.umn.edu).
 #'
 #' @section References:
 #' Bindschadler, R., P. Vornberger, A. Fleming, A. Fox, J. Mullins, D. Binnie, S. J. Paulsen, B. Granneman, and . Gorodetzky. (2008). "The Landsat image mosaic of Antarctica". _Remote Sensing of Environment_ 112(12): 4214-4226, https://doi.org/10.1016/j.rse.2008.07.006.
@@ -23,7 +23,7 @@
 #' # Make default map
 #' # penmap()
 #'
-#' # Make map of just adelie sites
+#' # Make map of just Adelie sites
 #' # penmap("ADPE")
 #'
 #' # Save leaflet in working directory

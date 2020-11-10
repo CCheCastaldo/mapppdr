@@ -9,9 +9,9 @@
 #'   \item{site_id}{unique identifier for each site}
 #'   \item{site_name}{site name and/or description}
 #'   \item{region}{site region as reported in the 2015 ASI Antarctic Peninsula Compendium (Naveen and Lynch, 2015) }
-#'   \item{ccamlr_id}{Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) subarea site is adjacent to}
+#'   \item{ccamlr_id}{Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) subarea within which the site lies}
 #'   \item{latitude}{site latitude (EPSG:4326), decimal degrees}
-#'   \item{longitude}{ongitude (EPSG:4326), decimal degrees}
+#'   \item{longitude}{site longitude (EPSG:4326), decimal degrees}
 #' }
 #' @source \url{http://www.penguinmap.com/}
 #' @source \url{https://oceanites.org/research-portal/antarctic-site-inventory/asi-census-sites/}

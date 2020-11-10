@@ -19,7 +19,7 @@
 #'   \item{count}{count of species type (adults, nests, or chicks) observed at the site, can be NA if record is presence/absence record only}
 #'   \item{accuracy}{accuracy scores were assigned on a 5 point scale (usually by the observer) that penguin census counters traditionally use to represent
 #'   count precision (see Croxall and Kirkwood, 1979)}
-#'   \item{vantage}{vantage point of observation, can be aerial, aerial photo, ground, ground photo, landsat satellite, offshore vessel, sentinel satellite, uav, or vhr}
+#'   \item{vantage}{vantage point of observation, can be aerial (direct count using an aerial platform), aerial photo (count of a photograph taken from an aerial platform), ground (direct count by an individual on the ground), ground photo (count of a photograph taken from a position on the ground), landsat satellite, offshore vessel, sentinel satellite, uav (count of a photograph taken from an unmanned aerial vehicle), or vhr (population estimate based on very-high [< 5 m resolution] commercial satellite imagery)}
 #' }
 #' @source \url{http://www.penguinmap.com/}
 #'

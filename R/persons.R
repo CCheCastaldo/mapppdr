@@ -1,7 +1,7 @@
 #' MAPPPD contributor bibliographic identifiers
 #'
-#' A dataset containing bibliographic identifiers for all people
-#' who contributed data to MAPPPD.
+#' A dataset containing bibliographic identifiers for all references
+#' contained within the MAPPPD database.
 #'
 #' @format A data frame with 316 rows and 3 variables:
 #' \describe{

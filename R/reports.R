@@ -7,9 +7,9 @@
 #' \describe{
 #'   \item{citekey}{unique identifier for each citation}
 #'   \item{title}{report title (may be title for specific chapter in a report)}
-#'   \item{institution}{institution which publishes report}
+#'   \item{institution}{institution that publishes report}
 #'   \item{type}{report type or name of third paper who prepared the report for the institution, if either is applicable}
-#'   \item{number}{unqiue report identifier as designated by the institution}
+#'   \item{number}{unique report identifier as designated by the institution}
 #'   \item{city}{publisher city}
 #'   \item{country}{publisher country}
 #'   \item{url}{url link to report, if available}

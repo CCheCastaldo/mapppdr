@@ -9,7 +9,7 @@
 #'   \item{site_id}{unique identifier for each site}
 #'   \item{site_name}{site name and/or description}
 #'   \item{region}{site region as reported in the 2015 ASI Antarctic Peninsula Compendium (Naveen and Lynch, 2015) }
-#'   \item{ccamlr_id}{Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) subarea site is adjacent to}
+#'   \item{ccamlr_id}{Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) subarea within which the site lies}
 #'   \item{geometry}{POINT geometry of site location (EPSG:4326)}
 #' }
 #' @source \url{http://www.penguinmap.com/}
