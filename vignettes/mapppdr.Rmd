@@ -145,9 +145,9 @@ McLean, M. W. (2017). “RefManageR: Import and Manage BibTeX and BibLaTeX Refer
 
 Pebesma, E. (2018). Simple Features for R: Standardized Support for Spatial Vector Data. _The R Journal_ 10(1): 439-446, https://doi.org/10.32614/RJ-2018-009
 
-Vaidyanathan, R., Y. Xie, J. J. Allaire, J. Cheng and K. Russell (2019). htmlwidgets: HTML Widgets for R. R package version 1.5.1. https://CRAN.R-project.org/package=htmlwidgets
-  
 Thanassekos, S., K. Reid and L. Robinson (2020). CCAMLRGIS: Antarctic Spatial Data Manipulation. R package version 3.0.6. https://CRAN.R-project.org/package=CCAMLRGIS
 
+Vaidyanathan, R., Y. Xie, J. J. Allaire, J. Cheng and K. Russell (2019). htmlwidgets: HTML Widgets for R. R package version 1.5.1. https://CRAN.R-project.org/package=htmlwidgets
+  
 Wickham et al., (2019). Welcome to the tidyverse. _Journal of Open Source Software_ 4(43): 1686, https://doi.org/10.21105/joss.01686
 
