@@ -3,7 +3,7 @@ mapppdr
 
 ### MAPPPD in R
 
-<a href="http://www.penguinmap.com"><img align="right" src="vignettes/mapppd_logo.png" style="border:solid #FFFFFF 2px;"/></a>
+<a href="http://www.penguinmap.com"><img align="right" src="mapppd_logo.png" style="border:solid #FFFFFF 2px;width:175px;height:175px;"/></a>
 
 The Mapping Application for Penguin Populations and Projected Dynamics
 (MAPPPD) is a web-based, open access, decision-support tool designed to
@@ -11,19 +11,25 @@ assist scientists, non-governmental organizations and policy-makers
 working to meet the management objectives as set forth by the Commission
 for the Conservation of Antarctic Marine Living Resources (CCAMLR) and
 other components of the Antarctic Treaty System (ATS). The MAPPPD
-database includes all publicly available published and unpublished count
-data on emperor, gentoo, Adélie and chinstrap penguins in Antarctica. A
-front end web interface located at
-[www.penguinmap.com](http://www.penguinmap.com) provides free and ready
-access to the most recent count data. The `mapppdr` package makes the
-MAPPPD database tables available as data frames (one with simple
-features), the MAPPPD BibTeX citation data, and a function for
-visualizing breeding colony locations using `leaflet`.
+database, described in Humphries et al. (2017), includes all publicly
+available published and unpublished count data on emperor, gentoo,
+Adélie and chinstrap penguins in Antarctica. A front end web interface
+located at [www.penguinmap.com](http://www.penguinmap.com) provides free
+and ready access to count data alongside population models that infer
+abundance in missing data and allow for straightforward aggregation
+across multiple populations (see Che-Castaldo et al. 2017). The
+`mapppdr` package makes the MAPPPD database tables available as data
+frames (one with simple features), the MAPPPD BibTeX citation data, and
+the function `penmap` for visualizing breeding colony locations using
+`leaflet`. The `mapppdr` package will always be updated before changes
+are reflected on the web interface at penguinmap.com and should be
+considered the most up-to-date database available on the distribution
+and abundance of Antarctic penguins.
 
 The package contains 12 data frames, 1 `BibEntry` object, and 1
 function:
 
--   `penguin_obs` - data frame containing the all publicly available
+-   `penguin_obs` - data frame containing the publicly available
     *Pygoscelis* and Emperor penguin counts and presence-absence data at
     breeding sites south of 60 degrees S latitude
 -   `citations` - data frame containing bibliographic identifiers for
@@ -32,8 +38,8 @@ function:
     *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees
     S latitude and all Antarctic Site Inventory (ASI) penguin/seabird
     census sites
--   `sites_sf` - `sites` data frame with location stored instead as a
-    simple feature
+-   `sites_sf` - `sites` data frame with locations stored as a simple
+    feature
 -   `species` - data frame containing the names of all penguin species
     included in MAPPPD
 -   `site_species` - data frame linking *Pygoscelis* and Emperor penguin
@@ -54,13 +60,13 @@ function:
     citations in MAPPPD
 -   `mapppd_bib` - `BibEntry` object containing bibliographic
     information for all citations in MAPPPD
--   `penmap` - function that creates a leaflet of all known *Pygoscelis*
-    and Emperor penguin breeding sites south of 60 degrees S latitude
+-   `penmap` - function that creates a leaflet map of all known
+    *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees
+    S latitude
 
-Installation
-------------
+## Installation
 
-You can install the latest version (0.1.1.2) from Github with:
+You can install the latest version (0.1.1.3) from Github with:
 
     install.packages('devtools')
     devtools::install_github('CCheCastaldo/mapppdr', build_vignettes = TRUE)
@@ -142,8 +148,8 @@ CCAMLR Sub area 48.2 from 1990 - 2000:
 You can also use spatial information to subset count data. This is quite
 easy using the `sf` [package
 tools](https://github.com/rstudio/cheatsheets/blob/master/sf.pdf). For
-instance, the following code selects counts from the 22 sites within 100
-km of ACUN (including ACUN itself):
+instance, the following code selects counts from the 22 sites whose
+great circle distances are within 10 km of ACUN (including ACUN itself):
 
     ACUN_area_counts <- sites_sf %>%
       mutate(ACUN_distance = as.numeric(sf::st_distance(sites_sf, sites_sf %>% 
@@ -152,19 +158,24 @@ km of ACUN (including ACUN itself):
       dplyr::select(site_id) %>%
       inner_join(penguin_obs, by = "site_id")
     st_geometry(ACUN_area_counts) <- NULL
-    head(ACUN_area_counts)
+    glimpse(ACUN_area_counts)
 
-    ## # A tibble: 6 x 14
-    ##   site_id species_id citekey month   day   doy date        year season type 
-    ##   <chr>   <chr>      <chr>   <int> <int> <int> <date>     <int>  <int> <chr>
-    ## 1 ACUN    ADPE       coria2…    NA    NA    NA NA          1993   1993 nests
-    ## 2 ACUN    ADPE       woehle…    NA    NA    NA NA          1994   1994 nests
-    ## 3 ACUN    ADPE       coria2…    NA    NA    NA NA          2004   2004 nests
-    ## 4 ACUN    ADPE       lynch2…     2    25    56 2011-02-25  2011   2010 nests
-    ## 5 ACUN    CHPE       poncet…    12    28   362 1983-12-28  1983   1983 nests
-    ## 6 ACUN    CHPE       coria2…    NA    NA    NA NA          2004   2004 nests
-    ## # … with 4 more variables: presence <int>, count <int>, accuracy <int>,
-    ## #   vantage <chr>
+    ## Rows: 55
+    ## Columns: 14
+    ## $ site_id    <chr> "ACUN", "ACUN", "ACUN", "ACUN", "ACUN", "ACUN", "AILS", "A…
+    ## $ species_id <chr> "ADPE", "ADPE", "ADPE", "ADPE", "CHPE", "CHPE", "CHPE", "C…
+    ## $ citekey    <chr> "coria2011laurie", "woehler1997status", "coria2011laurie",…
+    ## $ month      <int> NA, NA, NA, 2, 12, NA, 12, 2, 12, 1, 12, 1, 12, NA, NA, NA…
+    ## $ day        <int> NA, NA, NA, 25, 28, NA, 28, 10, 28, 22, 28, 22, 28, NA, NA…
+    ## $ doy        <int> NA, NA, NA, 56, 362, NA, 362, 41, 362, 22, 362, 22, 362, N…
+    ## $ date       <date> NA, NA, NA, 2011-02-25, 1983-12-28, NA, 1983-12-28, 2020-…
+    ## $ year       <int> 1993, 1994, 2004, 2011, 1983, 2004, 1983, 2020, 1983, 2019…
+    ## $ season     <int> 1993, 1994, 2004, 2010, 1983, 2004, 1983, 2019, 1983, 2018…
+    ## $ type       <chr> "nests", "nests", "nests", "nests", "nests", "nests", "nes…
+    ## $ presence   <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1…
+    ## $ count      <int> 2008, 1920, 1880, 3079, 4000, 7716, 6000, 3000, 3300, 3000…
+    ## $ accuracy   <int> 1, 1, 1, 5, 4, 1, 4, 5, 4, 5, 3, 5, 4, 2, 5, 1, 1, 4, 1, 4…
+    ## $ vantage    <chr> "ground", NA, "ground", "vhr", "ground", "ground", "ground…
 
 #### Bibliographic Data
 
@@ -178,33 +189,24 @@ their names spelled correctly.</u> To accomplish this we allow the
 bibliographic data to retain accents through UTF-8 special.
 Bibliographic data in `mapppdr` is stored in a set of data frames that
 allow for easy subsetting of the actual observation data using the
-`citekey` field. For instance. the following code returns all citations
-containing penguin counts where Néstor R. Coria is an author, before
-subsetting `penguin_obs` for the counts themselves.
+`citekey` field. For instance. the following code returns all journal
+articles containing penguin counts where Néstor R. Coria is an author,
+before subsetting `penguin_obs` for the counts themselves.
 
     coria_citations <- persons %>%
       dplyr::filter(family == "Coria" & given == "Néstor R.") %>%
       inner_join(citation_persons, by = "person_id") %>%
       dplyr::select(citekey) %>%
       inner_join(articles, by = "citekey") %>%
-      mutate(title_short = substr(title, 1, 80)) %>%
-      dplyr::select(citekey, journal, doi, title_short)
-    head(coria_citations)
+      dplyr::select(citekey, journal, doi, title)
+    glimpse(coria_citations)
 
-    ##                citekey            journal                       doi
-    ## 1    carlini2005effect    Folia Zoologica                      <NA>
-    ## 2 carlini2009responses      Polar Biology 10.1007/s00300-009-0637-y
-    ## 3      coria1995adelie      Polar Biology        10.1007/BF00239717
-    ## 4    coria1995breeding Marine Ornithology                      <NA>
-    ## 5    coria1996breeding Marine Ornithology                      <NA>
-    ## 6      coria2011laurie Marine Ornithology                      <NA>
-    ##                                                                        title_short
-    ## 1  The effect of Chinstrap penguins on the breeding performance of Adélie penguins
-    ## 2 Responses of Pygoscelis adeliae and P. papua populations to environmental change
-    ## 3 Diet of Adélie penguins Pygoscelis adeliae during the post-hatching period at Es
-    ## 4 Breeding birds at Duthoit Point, Nelson Island, South Shetland Islands, Antarcti
-    ## 5 The breeding birds of Cape Geddes, Laurie Island, South Orkney Islands, Antarcti
-    ## 6 Birds at Laurie Island, South Orkney Islands, Antarctica: Breeding species and t
+    ## Rows: 11
+    ## Columns: 4
+    ## $ citekey <chr> "carlini2005effect", "carlini2009responses", "coria1995adelie…
+    ## $ journal <chr> "Folia Zoologica", "Polar Biology", "Polar Biology", "Marine …
+    ## $ doi     <chr> NA, "10.1007/s00300-009-0637-y", "10.1007/BF00239717", NA, NA…
+    ## $ title   <chr> "The effect of Chinstrap penguins on the breeding performance…
 
     coria_counts <- penguin_obs %>%
       inner_join(coria_citations %>% dplyr::select(citekey), by = "citekey") 
@@ -343,7 +345,14 @@ Bindschadler, R., P. Vornberger, A. Fleming, A. Fox, J. Mullins, D.
 Binnie, S. J. Paulsen, B. Granneman, and . Gorodetzky. (2008). “The
 Landsat image mosaic of Antarctica”. *Remote Sensing of Environment*
 112(12): 4214-4226,
-<a href="https://doi.org/10.1016/j.rse.2008.07.006" class="uri">https://doi.org/10.1016/j.rse.2008.07.006</a>.
+<a href="https://doi.org/10.1016/j.rse.2008.07.006" class="uri">https://doi.org/10.1016/j.rse.2008.07.006</a>
+
+Che-Castaldo, C., S. Jenouvrier, C. Youngflesh, K. Shoemaker, G.
+Humphries, P. McDowall, L. Landrum, M. Holland, Y. Li, R. Ji, and H.J.
+Lynch. (2017). “Pan-Antarctic analysis aggregating spatial estimates of
+Adélie penguin abundance reveals robust dynamics despite stochastic
+noise”. *Nature Communications* 8: 832,
+<a href="https://doi.org/10.1038/s41467-017-00890-0" class="uri">https://doi.org/10.1038/s41467-017-00890-0</a>
 
 Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P.
 McDowall, M. Schrimpf and H. J. Lynch. (2017). “Mapping Application for
@@ -359,14 +368,16 @@ Pebesma, E. (2018). Simple Features for R: Standardized Support for
 Spatial Vector Data. *The R Journal* 10(1): 439-446,
 <a href="https://doi.org/10.32614/RJ-2018-009" class="uri">https://doi.org/10.32614/RJ-2018-009</a>
 
-Vaidyanathan, R., Y. Xie, J. J. Allaire, J. Cheng and K. Russell (2019).
-htmlwidgets: HTML Widgets for R. R package version 1.5.1.
-<a href="https://CRAN.R-project.org/package=htmlwidgets" class="uri">https://CRAN.R-project.org/package=htmlwidgets</a>
-
 Thanassekos, S., K. Reid and L. Robinson (2020). CCAMLRGIS: Antarctic
 Spatial Data Manipulation. R package version 3.0.6.
 <a href="https://CRAN.R-project.org/package=CCAMLRGIS" class="uri">https://CRAN.R-project.org/package=CCAMLRGIS</a>
 
+Vaidyanathan, R., Y. Xie, J. J. Allaire, J. Cheng and K. Russell (2019).
+htmlwidgets: HTML Widgets for R. R package version 1.5.1.
+<a href="https://CRAN.R-project.org/package=htmlwidgets" class="uri">https://CRAN.R-project.org/package=htmlwidgets</a>
+
 Wickham et al., (2019). Welcome to the tidyverse. *Journal of Open
 Source Software* 4(43): 1686,
 <a href="https://doi.org/10.21105/joss.01686" class="uri">https://doi.org/10.21105/joss.01686</a>
+
+<br>
