@@ -23,9 +23,9 @@ library(htmlwidgets)
 
 ### MAPPPD in R
 
-<a href="http://www.penguinmap.com"><img align="right" src="mapppd_logo.png" style="border:solid #FFFFFF 2px;"/></a>
+<a href="http://www.penguinmap.com"><img align="right" src="mapppd_logo.png" style="border:solid #FFFFFF 2px;width:175px;height:175px;"/></a>
 
-The Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) is a web-based, open access, decision-support tool designed to assist scientists, non-governmental organizations and policy-makers working to meet the management objectives as set forth by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) and other components of the Antarctic Treaty System (ATS). The MAPPPD database, described in Humphries et al. (2017), includes all publicly available published and unpublished count data on emperor, gentoo, Adélie and chinstrap penguins in Antarctica. A front end web interface located at [www.penguinmap.com](http://www.penguinmap.com) provides free and ready access to count data alongside population models that infer abundance in missing data and allow for straightforward aggregation across multiple populations (see Che-Castaldo et al. 2017). The `mapppdr` package makes the MAPPPD database tables available as data frames (one with simple features), the MAPPPD BibTeX citation data, and a function for visualizing breeding colony locations using `leaflet`. The `mapppdr` package will always be updated before changes are reflected on the web interface at penguinmap.com and should be considered the most up-to-date database available on the distribution and abundance of Antarctic penguins. 
+The Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) is a web-based, open access, decision-support tool designed to assist scientists, non-governmental organizations and policy-makers working to meet the management objectives as set forth by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) and other components of the Antarctic Treaty System (ATS). The MAPPPD database, described in Humphries et al. (2017), includes all publicly available published and unpublished count data on emperor, gentoo, Adélie and chinstrap penguins in Antarctica. A front end web interface located at [www.penguinmap.com](http://www.penguinmap.com) provides free and ready access to count data alongside population models that infer abundance in missing data and allow for straightforward aggregation across multiple populations (see Che-Castaldo et al. 2017). The `mapppdr` package makes the MAPPPD database tables available as data frames (one with simple features), the MAPPPD BibTeX citation data, and the function `penmap` for visualizing breeding colony locations using `leaflet`. The `mapppdr` package will always be updated before changes are reflected on the web interface at penguinmap.com and should be considered the most up-to-date database available on the distribution and abundance of Antarctic penguins. 
 
 <br>
 
@@ -61,7 +61,7 @@ chinstrap_counts <- penguin_obs %>%
 head(chinstrap_counts)
 ```
 
-You can also use spatial information to subset count data using the `sf` [package tools](https://github.com/rstudio/cheatsheets/blob/master/sf.pdf). For example, the following code selects counts from the 22 sites within 100 km of ACUN (including ACUN itself):
+You can also use spatial information to subset count data using the `sf` [package tools](https://github.com/rstudio/cheatsheets/blob/master/sf.pdf). For example, the following code selects counts from the 22 sites whose great circle distances are within 10 km of ACUN (including ACUN itself):
 
 ```{r }
 ACUN_area_counts <- sites_sf %>%
@@ -71,14 +71,14 @@ ACUN_area_counts <- sites_sf %>%
   dplyr::select(site_id) %>%
   inner_join(penguin_obs, by = "site_id")
 st_geometry(ACUN_area_counts) <- NULL
-head(ACUN_area_counts)
+glimpse(ACUN_area_counts)
 ```
 
 <br>
 
 ### Bibliographic Data
 
-A core MAPPPD project goal is to reliably report the observation metadata, and in this regard we work very hard to make sure all data in MAPPPD is properly cited and original data sources made easily available to end-users. One challenge with the MAPPPD bibliography is that fact that many of citations contain special characters (accents, umlauts, etc.). <u>People who contribute data to MAPPPD deserve to have their names spelled correctly.</u> To accomplish this we allow the bibliographic data to retain accents through UTF-8 special. Bibliographic data in `mapppdr` is stored in a set of data frames that allow for easy subsetting of the actual observation data using the `citekey` field. For instance. the following code returns all citations containing penguin counts where Néstor R. Coria is an author, before subsetting `penguin_obs` for the counts themselves.
+A core MAPPPD project goal is to reliably report the observation metadata, and in this regard we work very hard to make sure all data in MAPPPD is properly cited and original data sources made easily available to end-users. One challenge with the MAPPPD bibliography is that fact that many of citations contain special characters (accents, umlauts, etc.). <u>People who contribute data to MAPPPD deserve to have their names spelled correctly.</u> To accomplish this we allow the bibliographic data to retain accents through UTF-8 special. Bibliographic data in `mapppdr` is stored in a set of data frames that allow for easy subsetting of the actual observation data using the `citekey` field. For instance. the following code returns all journal articles containing penguin counts where Néstor R. Coria is an author, before subsetting `penguin_obs` for the counts themselves.
 
 ```{r }
 coria_citations <- persons %>%
@@ -86,9 +86,8 @@ coria_citations <- persons %>%
   inner_join(citation_persons, by = "person_id") %>%
   dplyr::select(citekey) %>%
   inner_join(articles, by = "citekey") %>%
-  mutate(title_short = substr(title, 1, 80)) %>%
-  dplyr::select(citekey, journal, doi, title_short)
-head(coria_citations)
+  dplyr::select(citekey, journal, doi, title)
+glimpse(coria_citations)
 
 coria_counts <- penguin_obs %>%
   inner_join(coria_citations %>% dplyr::select(citekey), by = "citekey") 
@@ -119,7 +118,7 @@ The following code will create an Adélie-only leaflet map, which you can then o
 penmap("ADPE")
 ```
 
-```{r, out.width = "50%", fig.align = 'center'}
+```{r, echo = FALSE, out.width = "50%", fig.align = 'center'}
 knitr::include_graphics("leaflet.png")
 ```
 
@@ -135,9 +134,9 @@ htmlwidgets::saveWidget(penmap("ADPE"), file = "~/Desktop/ADPE_map.html")
 
 ### Citations
 
-Bindschadler, R., P. Vornberger, A. Fleming, A. Fox, J. Mullins, D. Binnie, S. J. Paulsen, B. Granneman, and D. Gorodetzky. (2008). "The Landsat image mosaic of Antarctica". _Remote Sensing of Environment_ 112(12): 4214-4226, https://doi.org/10.1016/j.rse.2008.07.006.
+Bindschadler, R., P. Vornberger, A. Fleming, A. Fox, J. Mullins, D. Binnie, S. J. Paulsen, B. Granneman, and D. Gorodetzky. (2008). "The Landsat image mosaic of Antarctica". _Remote Sensing of Environment_ 112(12): 4214-4226, https://doi.org/10.1016/j.rse.2008.07.006
 
-Che-Castaldo, C., S. Jenouvrier, C. Youngflesh, K. Shoemaker, G. Humphries, P. McDowall, L. Landrum, M. Holland, Y. Li, R. Ji, and H.J. Lynch. (2017). "Pan-Antarctic analysis aggregating spatial estimates of Adélie penguin abundance reveals robust dynamics despite stochastic noise". _Nature Communications_ 8: 832, https://doi.org/10.1038/s41467-017-00890-0.
+Che-Castaldo, C., S. Jenouvrier, C. Youngflesh, K. Shoemaker, G. Humphries, P. McDowall, L. Landrum, M. Holland, Y. Li, R. Ji, and H.J. Lynch. (2017). "Pan-Antarctic analysis aggregating spatial estimates of Adélie penguin abundance reveals robust dynamics despite stochastic noise". _Nature Communications_ 8: 832, https://doi.org/10.1038/s41467-017-00890-0
 
 Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". _Polar Record_ 53(2): 160-166, https://doi.org/10.1017/S0032247417000055
 
@@ -150,4 +149,6 @@ Thanassekos, S., K. Reid and L. Robinson (2020). CCAMLRGIS: Antarctic Spatial Da
 Vaidyanathan, R., Y. Xie, J. J. Allaire, J. Cheng and K. Russell (2019). htmlwidgets: HTML Widgets for R. R package version 1.5.1. https://CRAN.R-project.org/package=htmlwidgets
   
 Wickham et al., (2019). Welcome to the tidyverse. _Journal of Open Source Software_ 4(43): 1686, https://doi.org/10.21105/joss.01686
+
+<br>
 
