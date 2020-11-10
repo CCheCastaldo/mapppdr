@@ -1,6 +1,6 @@
 #' Create leaflet of penguin breeding sites
 #'
-#' Creates leaflet of of all known Pygoscelis and Emperor penguin breeding sites south of 60 degrees S latitude.
+#' Creates leaflet of of all known Pygoscelis and Emperor penguin breeding sites south of 60 degrees S latitude contained within MAPPPD.
 #'
 #' @param species_map character vector of penguin species to include on map. Species are referenced using the species_id codes found in the species table.
 #'
@@ -13,11 +13,11 @@
 #' The map provides several helpful layers. These include the CCAMLR Statistical Areas and Divisions and Marine Protected Areas, the Antarctic Coastline (all exported from the `CCAMLRGIS` R package) and the Landsat Image Mosaic Of Antarctica (LIMA) (Bindschadler et al. 2008) WMS tiles hosted by the [Polar Geospatial Center](https://www.pgc.umn.edu).
 #'
 #' @section References:
-#' Bindschadler, R., P. Vornberger, A. Fleming, A. Fox, J. Mullins, D. Binnie, S. J. Paulsen, B. Granneman, and . Gorodetzky. (2008). "The Landsat image mosaic of Antarctica". _Remote Sensing of Environment_ 112(12): 4214-4226, https://doi.org/10.1016/j.rse.2008.07.006.
+#' Bindschadler, R., P. Vornberger, A. Fleming, A. Fox, J. Mullins, D. Binnie, S. J. Paulsen, B. Granneman, and . Gorodetzky. (2008). "The Landsat image mosaic of Antarctica". _Remote Sensing of Environment_ 112(12): 4214-4226,  \url{https://doi.org/10.1016/j.rse.2008.07.006}
 #'
-#' Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". _Polar Record_ 53(2): 160-166, https://doi.org/10.1017/S0032247417000055
+#' Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". _Polar Record_ 53(2): 160-166,  \url{https://doi.org/10.1017/S0032247417000055}
 #'
-#' Stephane T., K. Reid and L. Robinson (2020). CCAMLRGIS: Antarctic Spatial Data Manipulation. R package version 3.0.6. https://CRAN.R-project.org/package=CCAMLRGIS
+#' Stephane T., K. Reid and L. Robinson (2020). CCAMLRGIS: Antarctic Spatial Data Manipulation. R package version 3.0.6.  \url{https://CRAN.R-project.org/package=CCAMLRGIS}
 #'
 #' @examples
 #' # Make default map
