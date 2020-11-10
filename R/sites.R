@@ -2,7 +2,8 @@
 #'
 #' A dataset containing the name and location of all known Pygoscelis
 #' and Emperor penguin breeding sites south of 60 degrees S latitude
-#' and all Antarctic Site Inventory (ASI) penguin/seabird census sites.
+#' and all Antarctic Site Inventory (ASI) penguin/seabird census sites
+#' contained within MAPPPD.
 #'
 #' @format A data frame with 748 rows and 6 variables:
 #' \describe{
@@ -17,7 +18,7 @@
 #' @source \url{https://oceanites.org/research-portal/antarctic-site-inventory/asi-census-sites/}
 #'
 #' @section References:
-#' Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". _Polar Record_ 53(2): 160-166, https://doi.org/10.1017/S0032247417000055
+#' Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". _Polar Record_ 53(2): 160-166,  \url{https://doi.org/10.1017/S0032247417000055}
 #'
 #' Naveen, R. and Lynch H. J. (2015). "Antarctic Peninsula Compendium" 3rd Edition, Chevy Chase, Maryland, USA.
 "sites"
