@@ -22,9 +22,10 @@ across multiple populations (see Che-Castaldo et al. 2017). The
 frames (one with simple features), the MAPPPD BibTeX citation data, and
 the function `penmap` for visualizing breeding colony locations using
 `leaflet`. The `mapppdr` package will always be updated before changes
-are reflected on the web interface at penguinmap.com and should be
-considered the most up-to-date database available on the distribution
-and abundance of Antarctic penguins.
+are reflected on the web interface at
+[www.penguinmap.com](http://www.penguinmap.com) and should be considered
+the most up-to-date database available on the distribution and abundance
+of Antarctic penguins.
 
 The package contains 12 data frames, 1 `BibEntry` object, and 1
 function:
