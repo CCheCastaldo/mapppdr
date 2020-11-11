@@ -1,6 +1,12 @@
 mapppdr
 ================
 
+<!-- badges: start -->
+
+[![Travis build
+status](https://travis-ci.com/CCheCastaldo/mapppdr.svg?branch=master)](https://travis-ci.com/CCheCastaldo/mapppdr)
+<!-- badges: end -->
+
 ### MAPPPD in R
 
 <a href="http://www.penguinmap.com"><img align="right" src="vignettes/mapppd_logo.svg" width="240" style="border:solid #FFFFFF;"/></a>
