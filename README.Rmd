@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### MAPPPD in R
 
-<a href="http://www.penguinmap.com"><img align="right" src="vignettes/mapppd_logo.svg" width="250" style="border:solid #FFFFFF;"/></a>
+<a href="http://www.penguinmap.com"><img align="right" src="vignettes/mapppd_logo.svg" width="240" style="border:solid #FFFFFF;"/></a>
 
 The Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) is a web-based, open access, decision-support tool designed to assist scientists, non-governmental organizations and policy-makers working to meet the management objectives as set forth by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) and other components of the Antarctic Treaty System (ATS). The MAPPPD database, described in Humphries et al. (2017), includes all publicly available published and unpublished count data on emperor, gentoo, Adélie and chinstrap penguins in Antarctica. A front end web interface located at [www.penguinmap.com](http://www.penguinmap.com) provides free and ready access to count data alongside population models that infer abundance in missing data and allow for straightforward aggregation across multiple populations (see Che-Castaldo et al. 2017). The `mapppdr` package makes the MAPPPD database tables available as data frames (one with simple features), the MAPPPD BibTeX citation data, and the function `penmap` for visualizing breeding colony locations using `leaflet`. The `mapppdr` package will always be updated before changes are reflected on the web interface at [www.penguinmap.com](http://www.penguinmap.com) and should be considered the most up-to-date database available on the distribution and abundance of Antarctic penguins. 
 
