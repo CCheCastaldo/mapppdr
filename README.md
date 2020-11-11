@@ -29,15 +29,15 @@ and abundance of Antarctic penguins.
 The package contains 12 data frames, 1 `BibEntry` object, and 1
 function:
 
--   `penguin_obs` - data frame containing the publicly available
-    *Pygoscelis* and Emperor penguin counts and presence-absence data at
-    breeding sites south of 60 degrees S latitude
+-   `penguin_obs` - data frame containing all publicly available
+    *Pygoscelis* and Emperor penguin counts and presence-absence data
+    included in MAPPPD at breeding sites south of 60 degrees S latitude
 -   `citations` - data frame containing bibliographic identifiers for
     all citations referenced in MAPPPD
 -   `sites` - data frame containing the name and location of all known
     *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees
     S latitude and all Antarctic Site Inventory (ASI) penguin/seabird
-    census sites
+    census sites included in MAPPPD
 -   `sites_sf` - `sites` data frame with locations stored as simple
     features POINT geometries
 -   `species` - data frame containing the names of all penguin species
@@ -62,7 +62,7 @@ function:
     information for all citations in MAPPPD
 -   `penmap` - function that creates a leaflet map of all known
     *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees
-    S latitude
+    S latitude included in MAPPPD
 
 ## Installation
 
