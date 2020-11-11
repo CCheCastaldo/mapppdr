@@ -49,6 +49,12 @@
 
 penmap <- function(species_map = c("ADPE", "GEPE", "CHPE", "EMPE")) {
 
+  # check that only valid species_id codes are used
+  # if any invalid species_id code is used then stop function
+  if (any(!(species_map %in% c("ADPE", "GEPE", "CHPE"))) == TRUE) {
+    stop("unknown species_id code(s) specified")
+  } else {
+
   temp <- mapppdr::site_species %>%
     dplyr::filter(.data$species_id %in% species_map) %>%
     tidyr::pivot_wider(names_from = .data$species_id, values_from = .data$species_id) %>%
@@ -68,7 +74,7 @@ penmap <- function(species_map = c("ADPE", "GEPE", "CHPE", "EMPE")) {
   tile_url <- "https://overlord.pgc.umn.edu/arcgis/rest/services/imagery/ant_pgc_composite_mosaic/MapServer"
 
   # define 3031 leaflet CRS
-  # resolution, orogin, and bounds taken from LIMA metadata found at PGC WMS MapServer url (tile_url)
+  # resolution, origin, and bounds taken from LIMA metadata found at PGC WMS MapServer url (tile_url)
   crs_3031 <- leaflet::leafletCRS(
     crsClass = 'L.Proj.CRS',
     code = 'EPSG:3031',
@@ -188,5 +194,7 @@ penmap <- function(species_map = c("ADPE", "GEPE", "CHPE", "EMPE")) {
   )
 
   return(out)
+
+  }
 }
 
