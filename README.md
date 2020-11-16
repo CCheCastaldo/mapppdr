@@ -4,7 +4,7 @@ mapppdr
 <!-- badges: start -->
 
 [![Travis build
-status](https://travis-ci.com/CCheCastaldo/mapppdr.svg?branch=master)](https://travis-ci.com/CCheCastaldo/mapppdr)
+status](https://travis-ci.com/CCheCastaldo/mapppdr.svg?token=WLMqxGUJEqdpYmau7YqP&branch=main)](https://travis-ci.com/CCheCastaldo/mapppdr)
 <!-- badges: end -->
 
 ### MAPPPD in R
