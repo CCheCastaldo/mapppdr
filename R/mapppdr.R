@@ -1,6 +1,6 @@
 #' The 'mapppdr' package
 #'
-#' `mapppdr` is an R package used to manipulate and visualize data from the Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) database.
+#' `mapppdr` is an R package used to access and visualize data from the Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) database.
 #'
 #' @section Details:
 #' The package contains 12 data frames, 1 `BibEntry` object, and 1 function:

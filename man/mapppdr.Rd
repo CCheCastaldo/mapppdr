@@ -5,7 +5,7 @@
 \alias{mapppdr}
 \title{The 'mapppdr' package}
 \description{
-\code{mapppdr} is an R package used to manipulate and visualize data from the Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) database.
+\code{mapppdr} is an R package used to access and visualize data from the Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) database.
 }
 \section{Details}{
 
