@@ -98,12 +98,12 @@ We could also easily print the full bibliographic information for these particul
 
 ```{r chunk1, results = 'hide'}
 out <- mapppd_bib[mapppd_bib$key %in% coria_citations$citekey]
-RefManageR::WriteBib(out, file = "~/Desktop/Coria_citations.bib")
+RefManageR::WriteBib(out, file = "Coria_citations.bib")
 print(out, .opts = list(bib.style = "authoryear", style = "markdown"))
 ```
 
 ```{r ref.label = 'chunk1', results = 'asis', echo = F}
-
+unlink("vignettes/Coria_citations.bib")
 ```
 
 <br>
