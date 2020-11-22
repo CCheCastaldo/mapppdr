@@ -152,13 +152,13 @@ htmlwidgets::saveWidget(penmap("ADPE"), file = "~/Desktop/ADPE_map.html")
 
 ### Citations
 
-Bindschadler, R., P. Vornberger, A. Fleming, A. Fox, J. Mullins, D. Binnie, S. J. Paulsen, B. Granneman, and . Gorodetzky. (2008). "The Landsat image mosaic of Antarctica". _Remote Sensing of Environment_ 112(12): 4214-4226, https://doi.org/10.1016/j.rse.2008.07.006
+Bindschadler, R., P. Vornberger, A. Fleming, A. Fox, J. Mullins, D. Binnie, S. J. Paulsen, B. Granneman, and D. Gorodetzky. (2008). "The Landsat image mosaic of Antarctica". _Remote Sensing of Environment_ 112(12): 4214-4226, https://doi.org/10.1016/j.rse.2008.07.006
 
 Che-Castaldo, C., S. Jenouvrier, C. Youngflesh, K. Shoemaker, G. Humphries, P. McDowall, L. Landrum, M. Holland, Y. Li, R. Ji, and H.J. Lynch. (2017). "Pan-Antarctic analysis aggregating spatial estimates of Adélie penguin abundance reveals robust dynamics despite stochastic noise". _Nature Communications_ 8: 832, https://doi.org/10.1038/s41467-017-00890-0
 
 Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". _Polar Record_ 53(2): 160-166, https://doi.org/10.1017/S0032247417000055
 
-McLean, M. W. (2017). “RefManageR: Import and Manage BibTeX and BibLaTeX References in R.” _The Journal of Open Source Software_,     https://doi.org/10.21105/joss.00338
+McLean, M. W. (2017). “RefManageR: Import and Manage BibTeX and BibLaTeX References in R.” _The Journal of Open Source Software_, https://doi.org/10.21105/joss.00338
 
 Pebesma, E. (2018). Simple Features for R: Standardized Support for Spatial Vector Data. _The R Journal_ 10(1): 439-446, https://doi.org/10.32614/RJ-2018-009
 
