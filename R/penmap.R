@@ -1,6 +1,6 @@
 #' Create leaflet of penguin breeding sites
 #'
-#' Creates leaflet of of all known Pygoscelis and Emperor penguin breeding sites south of 60 degrees S latitude contained within MAPPPD.
+#' Creates leaflet of all known Pygoscelis and Emperor penguin breeding sites south of 60 degrees S latitude contained within MAPPPD.
 #'
 #' @param species_map character vector of penguin species to include on map. Species are referenced using the species_id codes found in the species table.
 #'
@@ -51,7 +51,7 @@ penmap <- function(species_map = c("ADPE", "GEPE", "CHPE", "EMPE")) {
 
   # check that only valid species_id codes are used
   # if any invalid species_id code is used then stop function
-  if (any(!(species_map %in% c("ADPE", "GEPE", "CHPE"))) == TRUE) {
+  if (any(!(species_map %in% c("ADPE", "GEPE", "CHPE", "EMPE"))) == TRUE) {
     stop("unknown species_id code(s) specified")
   } else {
 
