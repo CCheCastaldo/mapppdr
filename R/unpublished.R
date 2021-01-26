@@ -2,7 +2,7 @@
 #'
 #' A dataset containing citation information specific to unpublished data included in MAPPPD.
 #'
-#' @format A data frame with 18 rows and 4 variables:
+#' @format A data frame with 16 rows and 4 variables:
 #' \describe{
 #'   \item{citekey}{unique identifier for each citation}
 #'   \item{title}{description of data source}

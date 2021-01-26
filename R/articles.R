@@ -3,7 +3,7 @@
 #' A dataset containing citation information specific to journal articles
 #' whose data are included in MAPPPD.
 #'
-#' @format A data frame with 104 rows and 10 variables:
+#' @format A data frame with 106 rows and 10 variables:
 #' \describe{
 #'   \item{citekey}{unique identifier for each citation}
 #'   \item{title}{article title}
