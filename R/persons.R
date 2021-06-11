@@ -3,7 +3,7 @@
 #' A dataset containing bibliographic identifiers for all references
 #' contained within MAPPPD.
 #'
-#' @format A data frame with 314 rows and 3 variables:
+#' @format A data frame with 325 rows and 3 variables:
 #' \describe{
 #'   \item{person_id}{unique identifier for each person}
 #'   \item{family}{family name of person}

@@ -3,7 +3,7 @@
 #' A dataset containing the all publicly available Pygoscelis and Emperor penguin
 #' counts and presence-absence data at breeding sites south of 60 degrees S latitude contained within MAPPPD.
 #'
-#' @format A data frame with 4210 rows and 14 variables:
+#' @format A data frame with 4489 rows and 14 variables:
 #' \describe{
 #'   \item{site_id}{unique identifier for each site}
 #'   \item{species_id}{unique identifier for each species}
