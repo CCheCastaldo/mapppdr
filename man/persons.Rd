@@ -5,7 +5,7 @@
 \alias{persons}
 \title{MAPPPD contributor bibliographic identifiers}
 \format{
-A data frame with 314 rows and 3 variables:
+A data frame with 325 rows and 3 variables:
 \describe{
 \item{person_id}{unique identifier for each person}
 \item{family}{family name of person}

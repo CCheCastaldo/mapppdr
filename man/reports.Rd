@@ -5,7 +5,7 @@
 \alias{reports}
 \title{Citation information for technical reports referenced in MAPPPD}
 \format{
-A data frame with 40 rows and 8 variables:
+A data frame with 41 rows and 8 variables:
 \describe{
 \item{citekey}{unique identifier for each citation}
 \item{title}{report title (may be title for specific chapter in a report)}
