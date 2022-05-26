@@ -7,24 +7,20 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<!-- badges: start -->
-[![Travis build status](https://travis-ci.com/CCheCastaldo/mapppdr.svg?token=WLMqxGUJEqdpYmau7YqP&branch=main)](https://travis-ci.com/CCheCastaldo/mapppdr)
-<!-- badges: end -->
-
 ### MAPPPD in R
 
 <a href="http://www.penguinmap.com"><img align="right" src="vignettes/mapppd_logo.svg" width="240" style="border:solid #FFFFFF;"/></a>
 
-The Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) is a web-based, open access, decision-support tool designed to assist scientists, non-governmental organizations and policy-makers working to meet the management objectives as set forth by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) and other components of the Antarctic Treaty System (ATS). The MAPPPD database, described in Humphries et al. (2017), includes all publicly available published and unpublished count data on emperor, gentoo, Adélie and chinstrap penguins in Antarctica. A front end web interface located at [www.penguinmap.com](http://www.penguinmap.com) provides free and ready access to count data alongside population models that infer abundance in missing data and allow for straightforward aggregation across multiple populations (see Che-Castaldo et al. 2017). The `mapppdr` package makes the MAPPPD database tables available as data frames (one with simple features), the MAPPPD BibTeX citation data, and the function `penmap` for visualizing breeding colony locations using `leaflet`. The `mapppdr` package will always be updated before changes are reflected on the web interface at [www.penguinmap.com](http://www.penguinmap.com) and should be considered the most up-to-date database available on the distribution and abundance of Antarctic penguins. 
+The Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) is a web-based, open access, decision-support tool designed to assist scientists, non-governmental organizations and policy-makers working to meet the management objectives as set forth by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) and other components of the Antarctic Treaty System (ATS). The MAPPPD database, described in Humphries et al. (2017), includes all publicly available published and unpublished count data on Adélie, gentoo, chinstrap, emperor, king, and macaroni penguin penguins in Antarctica. A front end web interface located at [www.penguinmap.com](http://www.penguinmap.com) provides free and ready access to count data alongside population models that infer abundance in missing data and allow for straightforward aggregation across multiple populations (see Che-Castaldo et al. 2017). The `mapppdr` package makes the MAPPPD database tables available as data frames (one with simple features), the MAPPPD BibTeX citation data, and the function `penmap` for visualizing breeding colony locations using `leaflet`. The `mapppdr` package will always be updated before changes are reflected on the web interface at [www.penguinmap.com](http://www.penguinmap.com) and should be considered the most up-to-date database available on the distribution and abundance of Antarctic penguins. 
 
 The package contains 12 data frames, 1 `BibEntry` object, and 1 function:
 
-* `penguin_obs` - data frame containing all publicly available *Pygoscelis* and Emperor penguin counts and presence-absence data included in MAPPPD at breeding sites south of 60 degrees S latitude
+* `penguin_obs` - data frame containing all publicly available *Pygoscelis*, emperor, king, and macaroni penguin counts and presence-absence data included in MAPPPD at breeding sites south of 60 degrees S latitude
 * `citations` -  data frame containing bibliographic identifiers for all citations referenced in MAPPPD
-* `sites` -  data frame containing the name and location of all known *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees S latitude and all Antarctic Site Inventory (ASI) penguin/seabird census sites included in MAPPPD
+* `sites` -  data frame containing the name and location of all known *Pygoscelis*, emperor, king, and macaroni penguin breeding sites south of 60 degrees S latitude and all Antarctic Site Inventory (ASI) penguin/seabird census sites included in MAPPPD
 * `sites_sf` - `sites` data frame with locations stored as simple features POINT geometries
 * `species` -  data frame containing the names of all penguin species included in MAPPPD
-* `site_species` - data frame linking *Pygoscelis* and Emperor penguin species to their breeding sites in MAPPPD
+* `site_species` - data frame linking *Pygoscelis*, emperor, king, and macaroni penguin species to their breeding sites in MAPPPD
 * `articles` - data frame containing citation information specific to journal articles whose data are included in MAPPPD
 * `collections` - data frame containing citation information specific to books or conference proceedings containing data included in MAPPPD
 * `incollections` - data frame containing citation information specific to book chapters or conference papers whose data are included in MAPPPD
@@ -32,7 +28,7 @@ The package contains 12 data frames, 1 `BibEntry` object, and 1 function:
 * `persons` - data frame containing bibliographic identifiers for all people who contributed data to MAPPPD
 * `citation_persons` - data frame linking contributors to their citations in MAPPPD
 * `mapppd_bib` - `BibEntry` object containing bibliographic information for all citations in MAPPPD
-* `penmap` -  function that creates a leaflet map of all known *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees S latitude included in MAPPPD
+* `penmap` -  function that creates a leaflet map of all known *Pygoscelis*, emperor, king, and macaroni penguin breeding sites south of 60 degrees S latitude included in MAPPPD
 
 ## Installation
 
@@ -128,7 +124,7 @@ print(out, .opts = list(bib.style = "authoryear", style = "markdown"))
 
 #### Penguin Map Leaflet
 
-The function `penmap` allows for quick visualizations of the emperor, gentoo, Adélie and chinstrap penguins breeding sites in Antarctica using leaflet. The function takes a single argument, `species_map`, which is just the list of species (using their species_id codes) whose sites you wish to display on the map. These species are listed as a character vector, whose default is all four species. Colonies are clustered but as you zoom in (either by direct zooming or by clicking on colony clusters), individual sites appear as blue circles. Clicking on circles will reveal the site code, name, and what penguin species are breeding there. You can click on the globe button in the top left (directly below the zoom buttons) to zoom back and and recenter the map. Sometimes, sites are so close to another that resolving a cluster will set the zoom to maximum, potentially obscuring other colonies nearby. To prevent this you can lock and unlock the clusters by clicking on the button below the globe button. Locking clusters will cause sites to fan out in a circle around the cluster but at the current zoom level when clicked. You can disable this behavior by clicking on this button again. The map provides several helpful layers. These include the CCAMLR Statistical Areas and Divisions and Marine Protected Areas, the Antarctic Coastline (all exported from the `CCCAMLRGIS` R package) and the Landsat Image Mosaic Of Antarctica (LIMA) (Bindschadler et al. 2008) WMS tiles hosted by the [Polar Geospatial Center](https://www.pgc.umn.edu).
+The function `penmap` allows for quick visualizations of penguin breeding sites in Antarctica using leaflet. The function takes a single argument, `species_map`, which is just the list of species (using their species_id codes) whose sites you wish to display on the map. These species are listed as a character vector, whose default is all four species. Colonies are clustered but as you zoom in (either by direct zooming or by clicking on colony clusters), individual sites appear as blue circles. Clicking on circles will reveal the site code, name, and what penguin species are breeding there. You can click on the globe button in the top left (directly below the zoom buttons) to zoom back and and recenter the map. Sometimes, sites are so close to another that resolving a cluster will set the zoom to maximum, potentially obscuring other colonies nearby. To prevent this you can lock and unlock the clusters by clicking on the button below the globe button. Locking clusters will cause sites to fan out in a circle around the cluster but at the current zoom level when clicked. You can disable this behavior by clicking on this button again. The map provides several helpful layers. These include the CCAMLR Statistical Areas and Divisions and Marine Protected Areas, the Antarctic Coastline (all exported from the `CCCAMLRGIS` R package) and the Landsat Image Mosaic Of Antarctica (LIMA) (Bindschadler et al. 2008) WMS tiles hosted by the [Polar Geospatial Center](https://www.pgc.umn.edu).
 
 The following code will create an Adélie only leaflet, which you can then open in a browser by clicking on the Show in New Window Viewer button (located to the right of the broomstick icon).
 
