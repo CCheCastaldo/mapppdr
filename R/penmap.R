@@ -4,7 +4,7 @@
 #'
 #' @param species_map character vector of penguin species to include on map. Species are referenced using the species_id codes found in the species table.
 #'
-#' Default \code{'c("ADPE", "GDPE", "CHPE", "EMPE", "KIPE", "MCPE)'} returns breeding sites for all penguin species in MAPPPD.
+#' Default \code{'c("ADPE", "GDPE", "CHPE", "EMPE", "KIPE", "MCPE")'} returns breeding sites for all penguin species in MAPPPD.
 #'
 #' @section Details:
 #' \code{species_id} argument must be a character vector.

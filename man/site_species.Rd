@@ -5,7 +5,7 @@
 \alias{site_species}
 \title{Name and species breeding at MAPPPD penguin breeding sites}
 \format{
-A data frame with 829 rows and 2 variables:
+A data frame with 902 rows and 2 variables:
 \describe{
 \item{site_id}{unique identifier for each site}
 \item{species_id}{unique identifier for each species}

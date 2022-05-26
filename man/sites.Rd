@@ -5,7 +5,7 @@
 \alias{sites}
 \title{Name and location of MAPPPD seabird breeding sites}
 \format{
-A data frame with 748 rows and 6 variables:
+A data frame with 759 rows and 6 variables:
 \describe{
 \item{site_id}{unique identifier for each site}
 \item{site_name}{site name and/or description}
@@ -24,8 +24,8 @@ A data frame with 748 rows and 6 variables:
 sites
 }
 \description{
-A dataset containing the name and location of all known Pygoscelis
-and Emperor penguin breeding sites south of 60 degrees S latitude
+A dataset containing the name and location of all known Pygoscelis, emperor,
+king, and macaroni penguin breeding sites south of 60 degrees S latitude
 and all Antarctic Site Inventory (ASI) penguin/seabird census sites
 contained within MAPPPD.
 }

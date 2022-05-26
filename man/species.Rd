@@ -5,7 +5,7 @@
 \alias{species}
 \title{MAPPPD penguin species identifiers}
 \format{
-A data frame with 5 rows and 4 variables:
+A data frame with 7 rows and 4 variables:
 \describe{
 \item{species_id}{unique identifier for each species}
 \item{common_name}{species common name}

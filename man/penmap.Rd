@@ -4,15 +4,15 @@
 \alias{penmap}
 \title{Create leaflet of penguin breeding sites}
 \usage{
-penmap(species_map = c("ADPE", "GEPE", "CHPE", "EMPE"))
+penmap(species_map = c("ADPE", "GEPE", "CHPE", "EMPE", "KIPE", "MCPE"))
 }
 \arguments{
 \item{species_map}{character vector of penguin species to include on map. Species are referenced using the species_id codes found in the species table.
 
-Default \code{'c("ADPE", "GDPE", "CHPE", "EMPE")'} returns breeding sites for all penguin species in MAPPPD.}
+Default \code{'c("ADPE", "GDPE", "CHPE", "EMPE", "KIPE", "MCPE")'} returns breeding sites for all penguin species in MAPPPD.}
 }
 \description{
-Creates leaflet of all known Pygoscelis and Emperor penguin breeding sites south of 60 degrees S latitude contained within MAPPPD.
+Creates leaflet of all known Pygoscelis, emperor, king, and macaroni penguin breeding sites south of 60 degrees S latitude contained within MAPPPD.
 }
 \section{Details}{
 
