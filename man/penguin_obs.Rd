@@ -5,7 +5,7 @@
 \alias{penguin_obs}
 \title{Count and presence/absence observations included in MAPPPD}
 \format{
-A data frame with 4766 rows and 14 variables:
+A data frame with 4830 rows and 14 variables:
 \describe{
 \item{site_id}{unique identifier for each site}
 \item{species_id}{unique identifier for each species}
