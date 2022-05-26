@@ -2,11 +2,12 @@
 #'
 #' A dataset containing citation information specific to unpublished data included in MAPPPD.
 #'
-#' @format A data frame with 16 rows and 4 variables:
+#' @format A data frame with 18 rows and 4 variables:
 #' \describe{
 #'   \item{citekey}{unique identifier for each citation}
 #'   \item{title}{description of data source}
 #'   \item{type}{type of unpublished data. These include things such as datasets, monographs, reports, supplements, theses, etc.}
+#'   \item{doi}{dataset doi, if available}
 #'   \item{url}{url link to data source, if available}
 #' }
 #' @source \url{http://www.penguinmap.com/}

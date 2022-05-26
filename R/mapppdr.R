@@ -5,17 +5,17 @@
 #' @section Details:
 #' The package contains 12 data frames, 1 `BibEntry` object, and 1 function:
 #'
-#' `penguin_obs` - data frame containing all publicly available *Pygoscelis* and Emperor penguin counts and presence-absence data included in MAPPPD at breeding sites south of 60 degrees S latitude
+#' `penguin_obs` - data frame containing all publicly available *Pygoscelis*, emperor, king, and macaroni penguin counts and presence-absence data included in MAPPPD at breeding sites south of 60 degrees S latitude
 #'
 #' `citations` - data frame containing bibliographic identifiers for all citations referenced in MAPPPD
 #'
-#' `sites` - data frame containing the name and location of all known *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees S latitude and all Antarctic Site Inventory (ASI) penguin/seabird census sites included in MAPPPD
+#' `sites` - data frame containing the name and location of all known *Pygoscelis*, emperor, king, and macaroni penguin breeding sites south of 60 degrees S latitude and all Antarctic Site Inventory (ASI) penguin/seabird census sites included in MAPPPD
 #'
 #' `sites_sf` - `sites` data frame with locations stored as simple features POINT geometries
 #'
 #' `species` - data frame containing the names of all penguin species included in MAPPPD
 #'
-#' `site_species` - data frame linking *Pygoscelis* and Emperor penguin species to their breeding sites in MAPPPD
+#' `site_species` - data frame linking *Pygoscelis*, emperor, king, and macaroni penguin species to their breeding sites in MAPPPD
 #'
 #' `articles` - data frame containing citation information specific to journal articles whose data are included in MAPPPD
 #'
@@ -31,7 +31,7 @@
 #'
 #' `mapppd_bib` - `BibEntry` object containing bibliographic information for all citations in MAPPPD
 #'
-#' `penmap` - function that creates a leaflet map of all known *Pygoscelis* and Emperor penguin breeding sites south of 60 degrees S latitude included in MAPPPD)
+#' `penmap` - function that creates a leaflet map of all known *Pygoscelis*, emperor, king, and macaroni penguin breeding sites south of 60 degrees S latitude included in MAPPPD)
 #'
 #' The Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) is a web-based, open access, decision-support tool designed to assist scientists, non-governmental organizations and policy-makers working to meet the management objectives as set forth by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) and other components of the Antarctic Treaty System (ATS). The MAPPPD database, described in Humphries et al. (2017), includes all publicly available published and unpublished count data on emperor, gentoo, Adélie and chinstrap penguins in Antarctica. A front end web interface located at [www.penguinmap.com](http://www.penguinmap.com) provides free and ready access to count data alongside population models that infer abundance in missing data and allow for straightforward aggregation across multiple populations (see Che-Castaldo et al. 2017). The `mapppdr` package will always be updated before changes are reflected on the web interface at [www.penguinmap.com](http://www.penguinmap.com) and should be considered the most up-to-date database available on the distribution and abundance of Antarctic penguins.
 #'
