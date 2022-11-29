@@ -5,7 +5,7 @@
 \alias{sites}
 \title{Name and location of MAPPPD seabird breeding sites}
 \format{
-A data frame with 759 rows and 6 variables:
+A data frame with 719 rows and 6 variables:
 \describe{
 \item{site_id}{unique identifier for each site}
 \item{site_name}{site name and/or description}

@@ -5,7 +5,7 @@
 \alias{mapppd_bib}
 \title{Bibliography for citations referenced in MAPPPD}
 \format{
-An object of class \code{BibEntry} (inherits from \code{bibentry}) of length 197.
+An object of class \code{BibEntry} (inherits from \code{bibentry}) of length 155.
 }
 \source{
 \url{http://www.penguinmap.com/}

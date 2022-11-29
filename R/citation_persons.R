@@ -2,7 +2,7 @@
 #'
 #' A dataset linking contributors to their citations in MAPPPD.
 #'
-#' @format A data frame with 617 rows and 4 variables:
+#' @format A data frame with 505 rows and 4 variables:
 #' \describe{
 #'   \item{citekey}{unique identifier for each citation}
 #'   \item{person_id}{unique identifier for each person}

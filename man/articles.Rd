@@ -5,7 +5,7 @@
 \alias{articles}
 \title{Citation information for journal articles referenced in MAPPPD}
 \format{
-A data frame with 111 rows and 10 variables:
+A data frame with 89 rows and 10 variables:
 \describe{
 \item{citekey}{unique identifier for each citation}
 \item{title}{article title}

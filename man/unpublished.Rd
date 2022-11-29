@@ -5,11 +5,12 @@
 \alias{unpublished}
 \title{Citation information for persons referenced in MAPPPD}
 \format{
-A data frame with 18 rows and 4 variables:
+A data frame with 10 rows and 4 variables:
 \describe{
 \item{citekey}{unique identifier for each citation}
 \item{title}{description of data source}
-\item{type}{type of unpublished data. These include things such as datasets, monographs, reports, supplements, theses, etc.}
+\item{type}{type of unpublished data. These include things such as datasets, monographs, reports, supplements, thesis, etc.}
+\item{note}{dadditional information, such as date downloaded, if available}
 \item{doi}{dataset doi, if available}
 \item{url}{url link to data source, if available}
 }

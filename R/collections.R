@@ -3,7 +3,7 @@
 #' A dataset containing citation information specific to books or conference proceedings
 #' containing data included in MAPPPD.
 #'
-#' @format A data frame with 16 rows and 11 variables:
+#' @format A data frame with 12 rows and 11 variables:
 #' \describe{
 #'   \item{collection_id}{unique identifier for each book or conference proceeding}
 #'   \item{citekey}{unique identifier for each citation}

@@ -5,7 +5,7 @@
 \alias{incollections}
 \title{Citation information for books chapters or conference papers referenced in MAPPPD}
 \format{
-A data frame with 7 rows and 6 variables:
+A data frame with 4 rows and 6 variables:
 \describe{
 \item{citekey}{unique identifier for each citation}
 \item{collection_id}{unique identifier for each book or conference proceeding (in collections data frame)

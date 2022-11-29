@@ -3,7 +3,7 @@
 #' A dataset containing citation information specific to technical reports
 #' whose data are included in MAPPPD.
 #'
-#' @format A data frame with 41 rows and 8 variables:
+#' @format A data frame with 31 rows and 8 variables:
 #' \describe{
 #'   \item{citekey}{unique identifier for each citation}
 #'   \item{title}{report title (may be title for specific chapter in a report)}

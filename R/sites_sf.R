@@ -5,7 +5,7 @@
 #' and all Antarctic Site Inventory (ASI) penguin/seabird census sites
 #' contained within MAPPPD.
 #'
-#' @format An sf data frame with 759 rows, 4 attribute variables, and 1 simple features geometry column:
+#' @format An sf data frame with 719 rows, 4 attribute variables, and 1 simple features geometry column:
 #' \describe{
 #'   \item{site_id}{unique identifier for each site}
 #'   \item{site_name}{site name and/or description}

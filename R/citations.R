@@ -3,7 +3,7 @@
 #' A dataset containing bibliographic identifiers for all citations
 #' referenced in MAPPPD.
 #'
-#' @format A data frame with 197 rows and 3 variables:
+#' @format A data frame with 155 rows and 3 variables:
 #' \describe{
 #'   \item{citekey}{unique identifier for each citation}
 #'   \item{bibtype}{citation type, can be article (for journal articles), book, book chapter, conference paper, personal communication, report (for unpublished technical reports), or unpublished (for unpublished datasets, monographs, reports, supplements, theses, etc.). }

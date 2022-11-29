@@ -5,7 +5,7 @@
 \alias{sites_sf}
 \title{Name and location of MAPPPD seabird breeding sites}
 \format{
-An sf data frame with 759 rows, 4 attribute variables, and 1 simple features geometry column:
+An sf data frame with 719 rows, 4 attribute variables, and 1 simple features geometry column:
 \describe{
 \item{site_id}{unique identifier for each site}
 \item{site_name}{site name and/or description}

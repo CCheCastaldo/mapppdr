@@ -5,7 +5,7 @@
 #' and all Antarctic Site Inventory (ASI) penguin/seabird census sites
 #' contained within MAPPPD.
 #'
-#' @format A data frame with 759 rows and 6 variables:
+#' @format A data frame with 719 rows and 6 variables:
 #' \describe{
 #'   \item{site_id}{unique identifier for each site}
 #'   \item{site_name}{site name and/or description}
