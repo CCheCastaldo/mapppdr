@@ -42,5 +42,6 @@ mapppd_searchr <- function(Latitude=NULL,Longitude=NULL,distance=NULL){
   DT_sf <- sf::st_transform(DT_sf,sf::st_crs(sites_sf)) 
   Buff <- sf::st_buffer(DT_sf,dist = Buffer)
   Intersects <- sf::st_intersection(sites_sf,Buff)
+  Intersects$Distance <- sf::st_distance(DT_sf,Intersects)
   return(Intersects)
 }
