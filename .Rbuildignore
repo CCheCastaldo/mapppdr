@@ -1,7 +1,7 @@
+^mapppd_db$
 ^mapppdr\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
-^doc$
-^Meta$
 ^README.Rmd
-^\.travis\.yml$
+^README.md
+^create_symlinks\.R
