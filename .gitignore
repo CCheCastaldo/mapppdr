@@ -27,7 +27,3 @@
 **/.RData
 **/.Ruserdata
 **/*.Rproj
-
-# repo specific things to ignore
-**/_static/model_data_rinits_output.rda
-**/_static/model_sim_rinits_output.rda
