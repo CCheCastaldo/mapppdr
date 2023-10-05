@@ -1,6 +1,11 @@
 mapppdr
 ================
 
+[![CC BY
+4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/)[![License:
+GPL
+v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
+
 ### Antarctic Penguin Biogeography Project in R
 
 <a href="http://www.penguinmap.com"><img align="right" src="vignettes/mapppd_logo.svg" width="240" style="border:solid #FFFFFF;"/></a>
@@ -70,6 +75,16 @@ function:
 - `penmap` - function that creates a leaflet map of all known
   *Pygoscelis*, emperor, king and macaroni penguin breeding sites south
   of 60 degrees S latitude included in the APBP database
+
+## Releases
+
+- v2.4 (Oct X, 2023)
+
+This database is licensed under a [Creative Commons Attribution 4.0
+International License](http://creativecommons.org/licenses/by/4.0/).
+
+All code is licensed under a [The GNU General Public License
+v3.0](https://www.gnu.org/licenses/lgpl-3.0).
 
 ## Installation
 
