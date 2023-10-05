@@ -37,7 +37,7 @@ Aeronautics and Space Administration (NASA), the Pew Fellowship for
 Marine Conservation, and the Institute for Advanced Computational
 Science at Stony Brook University.
 
-The package contains 12 data frames, 1 `BibEntry` object, and 1
+The package contains 12 data frames, 1 `bibentry` object, and 1
 function:
 
 - `penguin_obs` - data frame containing all publicly available
