@@ -1,9 +1,9 @@
-#' Count and presence/absence observations included in MAPPPD
+#' Count and presence/absence observations included in the APBP database
 #'
-#' A dataset containing the all publicly available Pygoscelis, emperor, king, and macaroni penguin
-#' counts and presence-absence data at breeding sites south of 60 degrees S latitude contained within MAPPPD.
+#' A dataset containing the all publicly available _Pygoscelis_, emperor, king and macaroni penguin
+#' counts and presence-absence data at breeding sites south of 60 degrees S latitude contained within the APBP database.
 #'
-#' @format A data frame with 4759 rows and 14 variables:
+#' @format A data frame with `r dim(penguin_obs)[1]` rows and 14 variables:
 #' \describe{
 #'   \item{site_id}{unique identifier for each site}
 #'   \item{species_id}{unique identifier for each species}
@@ -14,18 +14,18 @@
 #'   \item{date}{date of observation, if month and day are also known}
 #'   \item{year}{year of observation}
 #'   \item{season}{season of observation}
-#'   \item{type}{type of observation, either adults, nests, or chicks}
-#'   \item{presence}{equals if species type (adults, nests, or chicks) observed at the site and 0 otherwise}
-#'   \item{count}{count of species type (adults, nests, or chicks) observed at the site, can be NA if record is presence/absence record only}
+#'   \item{type}{type of observation, either adults, nests (breeding pairs), or chicks}
+#'   \item{presence}{equals if species type (adults, nests (breeding pairs), or chicks) observed at the site and 0 otherwise}
+#'   \item{count}{count of species type (adults, nests (breeding pairs), or chicks) observed at the site, can be NA if record is presence/absence record only}
 #'   \item{accuracy}{accuracy scores were assigned on a 5 point scale (usually by the observer) that penguin census counters traditionally use to represent
 #'   count precision (see Croxall and Kirkwood, 1979)}
 #'   \item{vantage}{vantage point of observation, can be aerial (direct count using an aerial platform), aerial photo (count of a photograph taken from an aerial platform), ground (direct count by an individual on the ground), ground photo (count of a photograph taken from a position on the ground), landsat satellite, offshore vessel, sentinel satellite, uav (count of a photograph taken from an unmanned aerial vehicle), or vhr (population estimate based on very-high, < 5 m resolution, commercial satellite imagery)}
 #' }
-#' @source \url{http://www.penguinmap.com/}
+#' @source \url{https://doi.org/10.3897/BDJ.11.e101476}
 #'
 #' @section References:
-#' Croxall, J. P. and E. D. Kirkwood. (1979). The distribution of penguins on the Antarctic Peninsula and islands of the Scotia Sea. British Antarctic Survey, Cambridge, United Kingdom
+#' Che-Castaldo, C., G.R.W. Humphries, and H.J. Lynch. (2023). Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni and king penguin south of 60 S. _Biodiversity Data Journal_ 11: e101476, \url{https://doi.org/10.3897/BDJ.11.e101476}
 #'
-#' Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". _Polar Record_ 53(2): 160-166, \url{https://doi.org/10.1017/S0032247417000055}
+#' Croxall, J.P. and E.D. Kirkwood. (1979). The distribution of penguins on the Antarctic Peninsula and islands of the Scotia Sea. British Antarctic Survey, Cambridge, United Kingdom
 #'
 "penguin_obs"

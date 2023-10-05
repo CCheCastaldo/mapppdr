@@ -9,10 +9,10 @@ penmap(species_map = c("ADPE", "GEPE", "CHPE", "EMPE", "KIPE", "MCPE"))
 \arguments{
 \item{species_map}{character vector of penguin species to include on map. Species are referenced using the species_id codes found in the species table.
 
-Default \code{'c("ADPE", "GDPE", "CHPE", "EMPE", "KIPE", "MCPE")'} returns breeding sites for all penguin species in MAPPPD.}
+Default \code{'c("ADPE", "GDPE", "CHPE", "EMPE", "KIPE", "MCPE")'} returns breeding sites for all penguin species in the APBP database.}
 }
 \description{
-Creates leaflet of all known Pygoscelis, emperor, king, and macaroni penguin breeding sites south of 60 degrees S latitude contained within MAPPPD.
+Creates leaflet of all known \emph{Pygoscelis}, emperor, king, and macaroni penguin breeding sites south of 60 degrees S latitude contained within the APBP database.
 }
 \section{Details}{
 
@@ -26,10 +26,8 @@ The map provides several helpful layers. These include the CCAMLR Statistical Ar
 
 \section{References}{
 
-Bindschadler, R., P. Vornberger, A. Fleming, A. Fox, J. Mullins, D. Binnie, S. J. Paulsen, B. Granneman, and . Gorodetzky. (2008). "The Landsat image mosaic of Antarctica". \emph{Remote Sensing of Environment} 112(12): 4214-4226,  \url{https://doi.org/10.1016/j.rse.2008.07.006}
-
-Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". \emph{Polar Record} 53(2): 160-166,  \url{https://doi.org/10.1017/S0032247417000055}
-
+Bindschadler, R., P. Vornberger, A. Fleming, A. Fox, J. Mullins, D. Binnie, S. J. Paulsen, B. Granneman, and . Gorodetzky. (2008). "The Landsat image mosaic of Antarctica". \emph{Remote Sensing of Environment} 112(12): 4214-4226, \url{https://doi.org/10.1016/j.rse.2008.07.006}
+Che-Castaldo, C., G.R.W. Humphries, and H.J. Lynch. (2023). Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni and king penguin south of 60 S. \emph{Biodiversity Data Journal} 11: e101476, \url{https://doi.org/10.3897/BDJ.11.e101476}
 Stephane T., K. Reid and L. Robinson (2020). CCAMLRGIS: Antarctic Spatial Data Manipulation. R package version 3.0.6.  \url{https://CRAN.R-project.org/package=CCAMLRGIS}
 }
 

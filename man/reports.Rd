@@ -3,7 +3,7 @@
 \docType{data}
 \name{reports}
 \alias{reports}
-\title{Citation information for technical reports referenced in MAPPPD}
+\title{Citation information for technical reports referenced in Athe PBP database}
 \format{
 A data frame with 31 rows and 8 variables:
 \describe{
@@ -18,18 +18,18 @@ A data frame with 31 rows and 8 variables:
 }
 }
 \source{
-\url{http://www.penguinmap.com/}
+\url{https://doi.org/10.3897/BDJ.11.e101476}
 }
 \usage{
 reports
 }
 \description{
 A dataset containing citation information specific to technical reports
-whose data are included in MAPPPD.
+whose data are included in the APBP database.
 }
 \section{References}{
 
-Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". \emph{Polar Record} 53(2): 160-166,  \url{https://doi.org/10.1017/S0032247417000055}
+Che-Castaldo, C., G.R.W. Humphries, and H.J. Lynch. (2023). Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni and king penguin south of 60 S. \emph{Biodiversity Data Journal} 11: e101476, \url{https://doi.org/10.3897/BDJ.11.e101476}
 }
 
 \keyword{datasets}

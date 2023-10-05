@@ -5,52 +5,56 @@
 \alias{mapppdr}
 \title{The 'mapppdr' package}
 \description{
-\code{mapppdr} is an R package used to access and visualize data from the Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) database.
+\code{mapppdr} is an R package used to access and visualize data from the Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni and king penguin south of 60 S
 }
 \section{Details}{
 
 The package contains 12 data frames, 1 \code{BibEntry} object, and 1 function:
 
-\code{penguin_obs} - data frame containing all publicly available \emph{Pygoscelis}, emperor, king, and macaroni penguin counts and presence-absence data included in MAPPPD at breeding sites south of 60 degrees S latitude
+\code{penguin_obs} - data frame containing all publicly available \emph{Pygoscelis}, emperor, king and macaroni penguin counts and presence-absence data included in the APBP database at breeding sites south of 60 degrees S latitude
 
 \code{citations} - data frame containing bibliographic identifiers for all citations referenced in MAPPPD
 
-\code{sites} - data frame containing the name and location of all known \emph{Pygoscelis}, emperor, king, and macaroni penguin breeding sites south of 60 degrees S latitude and all Antarctic Site Inventory (ASI) penguin/seabird census sites included in MAPPPD
+\code{sites} - data frame containing the name and location of all known \emph{Pygoscelis}, emperor, king and macaroni penguin breeding sites south of 60 degrees S latitude
 
 \code{sites_sf} - \code{sites} data frame with locations stored as simple features POINT geometries
 
-\code{species} - data frame containing the names of all penguin species included in MAPPPD
+\code{species} - data frame containing the names of all penguin species included in the APBP database
 
-\code{site_species} - data frame linking \emph{Pygoscelis}, emperor, king, and macaroni penguin species to their breeding sites in MAPPPD
+\code{site_species} - data frame linking \emph{Pygoscelis}, emperor, king and macaroni penguin species to their breeding sites in the APBP database
 
-\code{articles} - data frame containing citation information specific to journal articles whose data are included in MAPPPD
+\code{articles} - data frame containing citation information specific to journal articles whose data are included in the APBP database
 
-\code{collections} - data frame containing citation information specific to books or conference proceedings containing data included in MAPPPD
+\code{collections} - data frame containing citation information specific to books or conference proceedings containing data included in the APBP database
 
-\code{incollections} - data frame containing citation information specific to book chapters or conference papers whose data are included in MAPPPD
+\code{incollections} - data frame containing citation information specific to book chapters or conference papers whose data are included in the APBP database
 
-\code{unpublished} - data frame containing citation information specific to unpublished data included in MAPPPD
+\code{unpublished} - data frame containing citation information specific to unpublished data included in the APBP database
 
-\code{persons} - data frame containing bibliographic identifiers for all people who contributed data to MAPPPD
+\code{persons} - data frame containing bibliographic identifiers for all people who contributed data to the APBP database
 
-\code{citation_persons} - data frame linking contributors to their citations in MAPPPD
+\code{citation_persons} - data frame linking contributors to their citations in the APBP database
 
-\code{mapppd_bib} - \code{BibEntry} object containing bibliographic information for all citations in MAPPPD
+\code{mapppd_bib} - \code{BibEntry} object containing bibliographic information for all citations in the APBP database
 
-\code{penmap} - function that creates a leaflet map of all known \emph{Pygoscelis}, emperor, king, and macaroni penguin breeding sites south of 60 degrees S latitude included in MAPPPD)
+\code{penmap} - function that creates a leaflet map of all known \emph{Pygoscelis}, emperor, king and macaroni penguin breeding sites south of 60 degrees S latitude included in the APBP database)
 
-The Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD) is a web-based, open access, decision-support tool designed to assist scientists, non-governmental organizations and policy-makers working to meet the management objectives as set forth by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) and other components of the Antarctic Treaty System (ATS). The MAPPPD database, described in Humphries et al. (2017), includes all publicly available published and unpublished count data on emperor, gentoo, Adélie and chinstrap penguins in Antarctica. A front end web interface located at \href{http://www.penguinmap.com}{www.penguinmap.com} provides free and ready access to count data alongside population models that infer abundance in missing data and allow for straightforward aggregation across multiple populations (see Che-Castaldo et al. 2017). The \code{mapppdr} package will always be updated before changes are reflected on the web interface at \href{http://www.penguinmap.com}{www.penguinmap.com} and should be considered the most up-to-date database available on the distribution and abundance of Antarctic penguins.
+The Antarctic Penguin Biogeography Project (APBP) is an effort to collate all known information about the distribution and abundance of Antarctic penguins through time and to make such data available to the scientific and management community. The core data product involves a series of structured tables with information on known breeding sites and surveys conducted at those sites from the earliest days of Antarctic exploration through to the present. This database, which is continuously updated as new information becomes available, provides a unified and comprehensive repository of information on Antarctic penguin biogeography that contributes to a growing suite of applications of value to the Antarctic community (Che-Castaldo et al., 2023a).  One such application is the Mapping Application for Antarctic Penguins and Projected Dynamics (MAPPPD; www.penguinmap.com), a browser-based search and visualization tool designed specifically for the management community and other non-specialists (Humphries et al., 2017), and as a Darwin Core archive distributed through the Ocean Biodiversity Information System (OBIS) and Global Biodiversity Information Facility (GBIF) clearing houses (Che-Castaldo et al., 2023b). The mapppdr R package makes this database more easily available to the scientific community by providing its tables as data frames (one with simple features), along with the BibTeX citation data as a bibentry object and a function for visualizing penguin breeding colony locations using leaflet. The Antarctic Penguin Biogeography Project has been funded by the National Aeronautics and Space Administration (NASA), the Pew Fellowship for Marine Conservation, and the Institute for Advanced Computational Science at Stony Brook University.
 
 The vignette can be run using \code{vignette('mapppdr')} if vignette is built when installing package.
 }
 
-\section{Author(s)}{
+\section{Author}{
 
-Christian Che-Castaldo \href{mailto:christian.che-castaldo@stonybrook.edu}{christian.che-castaldo@stonybrook.edu}, Heather J. Lynch \href{mailto:heather.lynch@stonybrook.edu}{heather.lynch@stonybrook.edu}
+Christian Che-Castaldo \href{mailto:che-castaldo@wisc.edu}{che-castaldo@wisc.edu}
 }
 
 \section{References}{
 
-Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". \emph{Polar Record} 53(2): 160-166,  \url{https://doi.org/10.1017/S0032247417000055}
+Che-Castaldo, C., G.R.W. Humphries, and H.J. Lynch. (2023a). Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni and king penguin south of 60 S. \emph{Biodiversity Data Journal} 11: e101476, \url{https://doi.org/10.3897/BDJ.11.e101476}
+
+Che-Castaldo, C., G.R.W. Humphries, H. J.Lynch H and A. Van de Putte. (2023b). Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni, and king penguin south of 60 S. Version 2.3. SCAR - AntOBIS. Samplingevent dataset, \url{ https://doi.org/10.48361/zftxkr}
+
+Humphries, G.R.W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H.J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". \emph{Polar Record} 53(2): 160-166, \url{https://doi.org/10.1017/S0032247417000055}
 }
 

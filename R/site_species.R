@@ -1,17 +1,16 @@
-#' Name and species breeding at MAPPPD penguin breeding sites
+#' Name and species breeding at APBP database penguin breeding sites
 #'
-#' A dataset containing the name of all known Pygoscelis and Emperor penguin breeding sites south of
-#' 60 degrees S latitude contained within MAPPPD and which of these species breed there.
+#' A dataset containing the name of all known _Pygoscelis_ and emperor, king, and macaroni penguin breeding sites south of
+#' 60 degrees S latitude contained within the APBP database and which of these species breed there.
 #'
-#' @format A data frame with 906 rows and 2 variables:
+#' @format A data frame with `r dim(site_species)[1]` rows and 2 variables:
 #' \describe{
 #'   \item{site_id}{unique identifier for each site}
 #'   \item{species_id}{unique identifier for each species}
 #' }
-#' @source \url{http://www.penguinmap.com/}
-#' @source \url{https://oceanites.org/research-portal/antarctic-site-inventory/asi-census-sites/}
+#' @source \url{https://doi.org/10.3897/BDJ.11.e101476}
 #'
 #' @section References:
-#' Humphries, G. R. W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H. J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". _Polar Record_ 53(2): 160-166,  \url{https://doi.org/10.1017/S0032247417000055}
+#' Che-Castaldo, C., G.R.W. Humphries, and H.J. Lynch. (2023). Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni and king penguin south of 60 S. _Biodiversity Data Journal_ 11: e101476, \url{https://doi.org/10.3897/BDJ.11.e101476}
 #'
 "site_species"
