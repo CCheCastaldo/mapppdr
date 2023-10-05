@@ -95,7 +95,7 @@ install.packages('devtools')
 devtools::install_github('CCheCastaldo/mapppdr', build_vignettes = TRUE)
 ```
 
-### Vignette
+## Vignette
 
 Interacting with `mapppdr` is easily done using the following R packages
 / collections of packages. The first three (`tidyverse`, `RefManageR`,

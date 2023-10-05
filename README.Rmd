@@ -64,7 +64,7 @@ library(sf)
 library(htmlwidgets)
 ```
 
-### Vignette
+## Vignette
 
 Interacting with `mapppdr` is easily done using the following R packages / collections of packages. The first three (`tidyverse`, `RefManageR`, and `sf`) are for manipulating the APBP data, while `htmlwidgets` is useful for exporting penguin map leaflets (described below).
 
