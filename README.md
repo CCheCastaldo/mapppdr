@@ -43,9 +43,9 @@ function:
 - `penguin_obs` - data frame containing all publicly available
   *Pygoscelis*, emperor, king and macaroni penguin counts and
   presence-absence data included in the APBP database at breeding sites
-  south of 60 degrees S latitude
+  south of 60 degrees S latitude in the APBP database
 - `citations` - data frame containing bibliographic identifiers for all
-  citations referenced in MAPPPD
+  citations in the APBP database
 - `sites` - data frame containing the name and location of all known
   *Pygoscelis*, emperor, king and macaroni penguin breeding sites south
   of 60 degrees S latitude and all Antarctic Site Inventory (ASI)
