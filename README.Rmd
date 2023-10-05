@@ -136,6 +136,7 @@ print(out, .opts = list(bib.style = "authoryear", style = "markdown"))
 ```{r ref.label = 'chunk1', results = 'asis', echo = FALSE}
 
 ```
+<br>
 
 #### Penguin Map Leaflet
 
@@ -161,7 +162,7 @@ You can also export and share leaflets quite easily. For instance, the following
 htmlwidgets::saveWidget(penmap("ADPE"), file = "~/Desktop/ADPE_map.html")
 ```
 
-### Citations
+## Citations
 
 Bindschadler, R., P. Vornberger, A. Fleming, A. Fox, J. Mullins, D. Binnie, S.J. Paulsen, B. Granneman, and D. Gorodetzky. (2008). "The Landsat image mosaic of Antarctica". _Remote Sensing of Environment_ 112(12): 4214-4226, https://doi.org/10.1016/j.rse.2008.07.006
 

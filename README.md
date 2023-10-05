@@ -325,6 +325,7 @@ Santos, M. M., J. T. Hinke, N. R. Coria, et al. (2018). “Abundance
 estimation of Adélie penguins at the Esperanza/Hope Bay mega colony”.
 In: *Polar Biology* 41.11, pp. 2337-2342. DOI:
 [10.1007/s00300-018-2373-7](https://doi.org/10.1007%2Fs00300-018-2373-7).
+<br>
 
 #### Penguin Map Leaflet
 
@@ -374,7 +375,7 @@ browser.
 htmlwidgets::saveWidget(penmap("ADPE"), file = "~/Desktop/ADPE_map.html")
 ```
 
-### Citations
+## Citations
 
 Bindschadler, R., P. Vornberger, A. Fleming, A. Fox, J. Mullins, D.
 Binnie, S.J. Paulsen, B. Granneman, and D. Gorodetzky. (2008). “The
