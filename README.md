@@ -1,9 +1,10 @@
 mapppdr
 ================
 
+[![version](https://img.shields.io/badge/version-2.4-yellow.svg)](https://github.com/CCheCastaldo/mapppdr/releases/tag/v2.4)
 [![CC BY
-4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/)[![License:
-GPL
+4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/)
+[![License: GPL
 v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
 ### Antarctic Penguin Biogeography Project in R
@@ -76,9 +77,7 @@ function:
   *Pygoscelis*, emperor, king and macaroni penguin breeding sites south
   of 60 degrees S latitude included in the APBP database
 
-## Releases
-
-- v2.4 (Oct X, 2023)
+## Licenses
 
 This database is licensed under a [Creative Commons Attribution 4.0
 International License](http://creativecommons.org/licenses/by/4.0/).
