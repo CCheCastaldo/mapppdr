@@ -27,3 +27,5 @@
 **/.RData
 **/.Ruserdata
 **/*.Rproj
+
+manuscript/*
