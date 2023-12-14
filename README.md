@@ -1,7 +1,7 @@
 mapppdr
 ================
 
-[![version](https://img.shields.io/badge/version-2.4-yellow.svg)](https://github.com/CCheCastaldo/mapppdr/releases/tag/v2.4)
+[![version](https://img.shields.io/badge/version-2.3-yellow.svg)](https://github.com/CCheCastaldo/mapppdr/)
 [![CC BY
 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/)
 [![License: GPL
