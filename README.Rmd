@@ -7,48 +7,46 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-[![version](https://img.shields.io/badge/version-2.3-yellow.svg)](https://github.com/CCheCastaldo/mapppdr/)
-[![CC BY 4.0][cc-by-shield]][cc-by]
-[![License: GPL v3][gpl-3-shield]][gpl-3]
+[![version](https://img.shields.io/badge/version-3.0-yellow.svg)](https://github.com/CCheCastaldo/mapppdr/) [![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ### Antarctic Penguin Biogeography Project in R
 
-<a href="http://www.penguinmap.com"><img align="right" src="vignettes/mapppd_logo.svg" width="240" style="border:solid #FFFFFF;"/></a>
+<a href="http://www.penguinmap.com"><img src="vignettes/mapppd_logo.svg" align="right" width="240" style="border:solid #FFFFFF;"/></a>
 
-The Antarctic Penguin Biogeography Project is an effort to collate all known information about the distribution and abundance of Antarctic penguins through time and to make such data available to the scientific and management community. The core data product involves a series of structured tables with information on known breeding sites and surveys conducted at those sites from the earliest days of Antarctic exploration through to the present. This database, which is continuously updated as new information becomes available, provides a unified and comprehensive repository of information on Antarctic penguin biogeography that contributes to a growing suite of applications of value to the Antarctic community (Che-Castaldo et al., 2023a).  One such application is the Mapping Application for Antarctic Penguins and Projected Dynamics (MAPPPD; www.penguinmap.com), a browser-based search and visualization tool designed specifically for the management community and other non-specialists (Humphries et al., 2017), and as a Darwin Core archive distributed through the Ocean Biodiversity Information System (OBIS) and Global Biodiversity Information Facility (GBIF) clearing houses (Che-Castaldo et al., 2023b). The `mapppdr` R package makes this database more easily available to the scientific community by providing its tables as data frames (one with simple features), along with the BibTeX citation data as a bibentry object and the function `penmap` for visualizing penguin breeding colony locations using `leaflet`. The Antarctic Penguin Biogeography Project has been funded by the National Aeronautics and Space Administration (NASA), the Pew Fellowship for Marine Conservation, and the Institute for Advanced Computational Science at Stony Brook University.
+The Antarctic Penguin Biogeography Project is an effort to collate all known information about the distribution and abundance of Antarctic penguins through time and to make such data available to the scientific and management community. The core data product involves a series of structured tables with information on known breeding sites and surveys conducted at those sites from the earliest days of Antarctic exploration through to the present. This database, which is continuously updated as new information becomes available, provides a unified and comprehensive repository of information on Antarctic penguin biogeography that contributes to a growing suite of applications of value to the Antarctic community (Che-Castaldo et al., 2023a). One such application is the Mapping Application for Antarctic Penguins and Projected Dynamics (MAPPPD; www.penguinmap.com), a browser-based search and visualization tool designed specifically for the management community and other non-specialists (Humphries et al., 2017), and as a Darwin Core archive distributed through the Ocean Biodiversity Information System (OBIS) and Global Biodiversity Information Facility (GBIF) clearing houses (Che-Castaldo et al., 2023b). The `mapppdr` R package makes this database more easily available to the scientific community by providing its tables as data frames (one with simple features), along with the BibTeX citation data as a bibentry object and the function `penmap` for visualizing penguin breeding colony locations using `leaflet`. The Antarctic Penguin Biogeography Project has been funded by the National Aeronautics and Space Administration (NASA), the Pew Fellowship for Marine Conservation, and the Institute for Advanced Computational Science at Stony Brook University.
 
 The package contains 12 data frames, 1 `bibentry` object, and 1 function:
 
-* `penguin_obs` - data frame containing all publicly available *Pygoscelis*, emperor, king and macaroni penguin counts and presence-absence data included in the APBP database at breeding sites south of 60 degrees S latitude in the APBP database
-* `citations` -  data frame containing bibliographic identifiers for all citations in the APBP database
-* `sites` -  data frame containing the name and location of all known *Pygoscelis*, emperor, king and macaroni penguin breeding sites south of 60 degrees S latitude and all Antarctic Site Inventory (ASI) penguin/seabird census sites included in the APBP database
-* `sites_sf` - `sites` data frame with locations stored as simple features POINT geometries
-* `species` -  data frame containing the names of all penguin species included in the APBP database
-* `site_species` - data frame linking *Pygoscelis*, emperor, king and macaroni penguin species to their breeding sites in the APBP database
-* `articles` - data frame containing citation information specific to journal articles whose data are included in the APBP database
-* `collections` - data frame containing citation information specific to books or conference proceedings containing data included in the APBP database
-* `incollections` - data frame containing citation information specific to book chapters or conference papers whose data are included in the APBP database
-* `unpublished` - data frame containing citation information specific to unpublished data included in the APBP database
-* `persons` - data frame containing bibliographic identifiers for all people who contributed data to the APBP database
-* `citation_persons` - data frame linking contributors to their citations in the APBP database
-* `mapppd_bib` - `BibEntry` object containing bibliographic information for all citations in the APBP database
-* `penmap` -  function that creates a leaflet map of all known *Pygoscelis*, emperor, king and macaroni penguin breeding sites south of 60 degrees S latitude included in the APBP database
+-   `penguin_obs` - data frame containing all publicly available *Pygoscelis*, emperor, king and macaroni penguin counts and presence-absence data included in the APBP database at breeding sites south of 60 degrees S latitude in the APBP database
+-   `citations` - data frame containing bibliographic identifiers for all citations in the APBP database
+-   `sites` - data frame containing the name and location of all known *Pygoscelis*, emperor, king and macaroni penguin breeding sites south of 60 degrees S latitude and all Antarctic Site Inventory (ASI) penguin/seabird census sites included in the APBP database
+-   `sites_sf` - `sites` data frame with locations stored as simple features POINT geometries
+-   `species` - data frame containing the names of all penguin species included in the APBP database
+-   `site_species` - data frame linking *Pygoscelis*, emperor, king and macaroni penguin species to their breeding sites in the APBP database
+-   `articles` - data frame containing citation information specific to journal articles whose data are included in the APBP database
+-   `collections` - data frame containing citation information specific to books or conference proceedings containing data included in the APBP database
+-   `incollections` - data frame containing citation information specific to book chapters or conference papers whose data are included in the APBP database
+-   `unpublished` - data frame containing citation information specific to unpublished data included in the APBP database
+-   `persons` - data frame containing bibliographic identifiers for all people who contributed data to the APBP database
+-   `citation_persons` - data frame linking contributors to their citations in the APBP database
+-   `mapppd_bib` - `BibEntry` object containing bibliographic information for all citations in the APBP database
+-   `penmap` - function that creates a leaflet map of all known *Pygoscelis*, emperor, king and macaroni penguin breeding sites south of 60 degrees S latitude included in the APBP database
 
 ## Licenses
 
-This database is licensed under a [Creative Commons Attribution 4.0 International License][cc-by].
+This database is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 
-All code is licensed under a [The GNU General Public License v3.0][gpl-3].
+All code is licensed under a [The GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0).
 
-[cc-by]: http://creativecommons.org/licenses/by/4.0/
-[gpl-3]: https://www.gnu.org/licenses/lgpl-3.0
-[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
-[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
-[gpl-3-shield]: https://img.shields.io/badge/License-GPLv3-blue.svg
+## Citation
+
+**Please cite the paper below when using the `mapppdr` package:**
+
+> Che-Castaldo, C., G.R.W. Humphries, and H.J. Lynch. (2023). Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni and king penguin south of 60 S. *Biodiversity Data Journal* 11: e101476, <https://doi.org/10.3897/BDJ.11.e101476>
 
 ## Installation
 
-You can install the  latest version (2.4) from Github with:
+You can install the latest version (3.0) from Github with:
 
 ```{r, eval = FALSE}
 install.packages('devtools')
@@ -125,7 +123,7 @@ coria_counts <- penguin_obs %>%
 head(coria_counts)
 ```
 
-We could also easily print the full bibliographic information for these particular counts, as well as export them as a `.bibTeX` file. This file could be used in LaTeX, Overleaf, or imported into other reference management software, such as Zotero. 
+We could also easily print the full bibliographic information for these particular counts, as well as export them as a `.bibTeX` file. This file could be used in LaTeX, Overleaf, or imported into other reference management software, such as Zotero.
 
 ```{r chunk1, results = 'hide'}
 out <- mapppd_bib[mapppd_bib$key %in% coria_citations$citekey]
@@ -136,6 +134,7 @@ print(out, .opts = list(bib.style = "authoryear", style = "markdown"))
 ```{r ref.label = 'chunk1', results = 'asis', echo = FALSE}
 
 ```
+
 <br>
 
 #### Penguin Map Leaflet
@@ -149,9 +148,11 @@ penmap("ADPE")
 ```
 
 <p align="center">
+
 ```{r, echo = FALSE, out.width = "50%", fig.align = 'center'}
 knitr::include_graphics("vignettes/leaflet.png")
 ```
+
 </p>
 
 <br>
@@ -164,22 +165,22 @@ htmlwidgets::saveWidget(penmap("ADPE"), file = "~/Desktop/ADPE_map.html")
 
 ## Citations
 
-Bindschadler, R., P. Vornberger, A. Fleming, A. Fox, J. Mullins, D. Binnie, S.J. Paulsen, B. Granneman, and D. Gorodetzky. (2008). "The Landsat image mosaic of Antarctica". _Remote Sensing of Environment_ 112(12): 4214-4226, https://doi.org/10.1016/j.rse.2008.07.006
+Bindschadler, R., P. Vornberger, A. Fleming, A. Fox, J. Mullins, D. Binnie, S.J. Paulsen, B. Granneman, and D. Gorodetzky. (2008). "The Landsat image mosaic of Antarctica". *Remote Sensing of Environment* 112(12): 4214-4226, <https://doi.org/10.1016/j.rse.2008.07.006>
 
-Che-Castaldo, C., G.R.W. Humphries, and H.J. Lynch. (2023a). Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni and king penguin south of 60 S. _Biodiversity Data Journal_ 11: e101476, https://doi.org/10.3897/BDJ.11.e101476
+Che-Castaldo, C., G.R.W. Humphries, and H.J. Lynch. (2023a). Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni and king penguin south of 60 S. *Biodiversity Data Journal* 11: e101476, <https://doi.org/10.3897/BDJ.11.e101476>
 
-Che-Castaldo, C., G.R.W. Humphries, H. J.Lynch H and A. Van de Putte. (2023b). Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni, and king penguin south of 60 S. Version 2.3. SCAR - AntOBIS. Samplingevent dataset, https://doi.org/10.48361/zftxkr
+Che-Castaldo, C., G.R.W. Humphries, H. J.Lynch H and A. Van de Putte. (2023b). Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni, and king penguin south of 60 S. Version 2.3. SCAR - AntOBIS. Samplingevent dataset, <https://doi.org/10.48361/zftxkr>
 
-Humphries, G.R.W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H.J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". _Polar Record_ 53(2): 160-166, https://doi.org/10.1017/S0032247417000055
+Humphries, G.R.W., R. Naveen, M. Schwaller, C. Che-Castaldo, P. McDowall, M. Schrimpf and H.J. Lynch. (2017). "Mapping Application for Penguin Populations and Projected Dynamics (MAPPPD): Data and tools for dynamic management and decision support". *Polar Record* 53(2): 160-166, <https://doi.org/10.1017/S0032247417000055>
 
-McLean, M. W. (2017). “RefManageR: Import and Manage BibTeX and BibLaTeX References in R.” _The Journal of Open Source Software_, https://doi.org/10.21105/joss.00338
+McLean, M. W. (2017). “RefManageR: Import and Manage BibTeX and BibLaTeX References in R.” *The Journal of Open Source Software*, <https://doi.org/10.21105/joss.00338>
 
-Pebesma, E. (2018). Simple Features for R: Standardized Support for Spatial Vector Data. _The R Journal_ 10(1): 439-446, https://doi.org/10.32614/RJ-2018-009
+Pebesma, E. (2018). Simple Features for R: Standardized Support for Spatial Vector Data. *The R Journal* 10(1): 439-446, <https://doi.org/10.32614/RJ-2018-009>
 
-Thanassekos, S., K. Reid and L. Robinson (2020). CCAMLRGIS: Antarctic Spatial Data Manipulation. R package version 3.0.6. https://CRAN.R-project.org/package=CCAMLRGIS
+Thanassekos, S., K. Reid and L. Robinson (2020). CCAMLRGIS: Antarctic Spatial Data Manipulation. R package version 3.0.6. <https://CRAN.R-project.org/package=CCAMLRGIS>
 
-Vaidyanathan, R., Y. Xie, J.J. Allaire, J. Cheng and K. Russell (2019). htmlwidgets: HTML Widgets for R. R package version 1.5.1. https://CRAN.R-project.org/package=htmlwidgets
+Vaidyanathan, R., Y. Xie, J.J. Allaire, J. Cheng and K. Russell (2019). htmlwidgets: HTML Widgets for R. R package version 1.5.1. <https://CRAN.R-project.org/package=htmlwidgets>
 
-Wickham et al. (2019). Welcome to the tidyverse. _Journal of Open Source Software_ 4(43): 1686, https://doi.org/10.21105/joss.01686
+Wickham et al. (2019). Welcome to the tidyverse. *Journal of Open Source Software* 4(43): 1686, <https://doi.org/10.21105/joss.01686>
 
 <br>

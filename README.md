@@ -1,15 +1,20 @@
-mapppdr
-================
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
 
-[![version](https://img.shields.io/badge/version-2.3-yellow.svg)](https://github.com/CCheCastaldo/mapppdr/)
+# mapppdr
+
+[![version](https://img.shields.io/badge/version-3.0-yellow.svg)](https://github.com/CCheCastaldo/mapppdr/)
 [![CC BY
 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/)
 [![License: GPL
-v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
+v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ### Antarctic Penguin Biogeography Project in R
 
-<a href="http://www.penguinmap.com"><img align="right" src="vignettes/mapppd_logo.svg" width="240" style="border:solid #FFFFFF;"/></a>
+<a href="http://www.penguinmap.com"><img src="vignettes/mapppd_logo.svg" align="right" width="240" style="border:solid #FFFFFF;"/></a>
 
 The Antarctic Penguin Biogeography Project is an effort to collate all
 known information about the distribution and abundance of Antarctic
@@ -41,41 +46,42 @@ Science at Stony Brook University.
 The package contains 12 data frames, 1 `bibentry` object, and 1
 function:
 
-- `penguin_obs` - data frame containing all publicly available
-  *Pygoscelis*, emperor, king and macaroni penguin counts and
-  presence-absence data included in the APBP database at breeding sites
-  south of 60 degrees S latitude in the APBP database
-- `citations` - data frame containing bibliographic identifiers for all
-  citations in the APBP database
-- `sites` - data frame containing the name and location of all known
-  *Pygoscelis*, emperor, king and macaroni penguin breeding sites south
-  of 60 degrees S latitude and all Antarctic Site Inventory (ASI)
-  penguin/seabird census sites included in the APBP database
-- `sites_sf` - `sites` data frame with locations stored as simple
-  features POINT geometries
-- `species` - data frame containing the names of all penguin species
-  included in the APBP database
-- `site_species` - data frame linking *Pygoscelis*, emperor, king and
-  macaroni penguin species to their breeding sites in the APBP database
-- `articles` - data frame containing citation information specific to
-  journal articles whose data are included in the APBP database
-- `collections` - data frame containing citation information specific to
-  books or conference proceedings containing data included in the APBP
-  database
-- `incollections` - data frame containing citation information specific
-  to book chapters or conference papers whose data are included in the
-  APBP database
-- `unpublished` - data frame containing citation information specific to
-  unpublished data included in the APBP database
-- `persons` - data frame containing bibliographic identifiers for all
-  people who contributed data to the APBP database
-- `citation_persons` - data frame linking contributors to their
-  citations in the APBP database
-- `mapppd_bib` - `BibEntry` object containing bibliographic information
-  for all citations in the APBP database
-- `penmap` - function that creates a leaflet map of all known
-  *Pygoscelis*, emperor, king and macaroni penguin breeding sites south
-  of 60 degrees S latitude included in the APBP database
+-   `penguin_obs` - data frame containing all publicly available
+    *Pygoscelis*, emperor, king and macaroni penguin counts and
+    presence-absence data included in the APBP database at breeding
+    sites south of 60 degrees S latitude in the APBP database
+-   `citations` - data frame containing bibliographic identifiers for
+    all citations in the APBP database
+-   `sites` - data frame containing the name and location of all known
+    *Pygoscelis*, emperor, king and macaroni penguin breeding sites
+    south of 60 degrees S latitude and all Antarctic Site Inventory
+    (ASI) penguin/seabird census sites included in the APBP database
+-   `sites_sf` - `sites` data frame with locations stored as simple
+    features POINT geometries
+-   `species` - data frame containing the names of all penguin species
+    included in the APBP database
+-   `site_species` - data frame linking *Pygoscelis*, emperor, king and
+    macaroni penguin species to their breeding sites in the APBP
+    database
+-   `articles` - data frame containing citation information specific to
+    journal articles whose data are included in the APBP database
+-   `collections` - data frame containing citation information specific
+    to books or conference proceedings containing data included in the
+    APBP database
+-   `incollections` - data frame containing citation information
+    specific to book chapters or conference papers whose data are
+    included in the APBP database
+-   `unpublished` - data frame containing citation information specific
+    to unpublished data included in the APBP database
+-   `persons` - data frame containing bibliographic identifiers for all
+    people who contributed data to the APBP database
+-   `citation_persons` - data frame linking contributors to their
+    citations in the APBP database
+-   `mapppd_bib` - `BibEntry` object containing bibliographic
+    information for all citations in the APBP database
+-   `penmap` - function that creates a leaflet map of all known
+    *Pygoscelis*, emperor, king and macaroni penguin breeding sites
+    south of 60 degrees S latitude included in the APBP database
 
 ## Licenses
 
@@ -83,11 +89,21 @@ This database is licensed under a [Creative Commons Attribution 4.0
 International License](http://creativecommons.org/licenses/by/4.0/).
 
 All code is licensed under a [The GNU General Public License
-v3.0](https://www.gnu.org/licenses/lgpl-3.0).
+v3.0](https://www.gnu.org/licenses/gpl-3.0).
+
+## Citation
+
+**Please cite the paper below when using the `mapppdr` package:**
+
+> Che-Castaldo, C., G.R.W. Humphries, and H.J. Lynch. (2023). Antarctic
+> Penguin Biogeography Project: Database of abundance and distribution
+> for the Adélie, chinstrap, gentoo, emperor, macaroni and king penguin
+> south of 60 S. *Biodiversity Data Journal* 11: e101476,
+> <https://doi.org/10.3897/BDJ.11.e101476>
 
 ## Installation
 
-You can install the latest version (2.4) from Github with:
+You can install the latest version (3.0) from Github with:
 
 ``` r
 install.packages('devtools')
@@ -125,20 +141,22 @@ data(penguin_obs)
 head(penguin_obs)
 ```
 
-    ##   site_id species_id           citekey month day doy       date year season
-    ## 1    ACUN       ADPE   coria2011laurie    NA  NA  NA       <NA> 1993   1993
-    ## 2    ACUN       ADPE woehler1997status    NA  NA  NA       <NA> 1994   1994
-    ## 3    ACUN       ADPE   coria2011laurie    NA  NA  NA       <NA> 2004   2004
-    ## 4    ACUN       ADPE   lynch2014global     2  25  56 2011-02-25 2011   2010
-    ## 5    ACUN       CHPE  poncet1985survey    12  28 362 1983-12-28 1983   1983
-    ## 6    ACUN       CHPE   coria2011laurie    NA  NA  NA       <NA> 2004   2004
-    ##    type presence count accuracy vantage
-    ## 1 nests        1  2008        1  ground
-    ## 2 nests        1  1920        1    <NA>
-    ## 3 nests        1  1880        1  ground
-    ## 4 nests        1  3079        5     vhr
-    ## 5 nests        1  4000        4  ground
-    ## 6 nests        1  7716        1  ground
+```         
+##   site_id species_id           citekey month day doy       date year season
+## 1    ACUN       ADPE   coria2011laurie    NA  NA  NA       <NA> 1993   1993
+## 2    ACUN       ADPE woehler1997status    NA  NA  NA       <NA> 1994   1994
+## 3    ACUN       ADPE   coria2011laurie    NA  NA  NA       <NA> 2004   2004
+## 4    ACUN       ADPE   lynch2014global     2  25  56 2011-02-25 2011   2010
+## 5    ACUN       CHPE  poncet1985survey    12  28 362 1983-12-28 1983   1983
+## 6    ACUN       CHPE   coria2011laurie    NA  NA  NA       <NA> 2004   2004
+##    type presence count accuracy vantage
+## 1 nests        1  2008        1  ground
+## 2 nests        1  1920        1    <NA>
+## 3 nests        1  1880        1  ground
+## 4 nests        1  3079        5     vhr
+## 5 nests        1  4000        4  ground
+## 6 nests        1  7716        1  ground
+```
 
 It is easy to subset the data in various ways using the tidyverse. For
 example, the following code returns all the chinstrap nest counts in
@@ -152,27 +170,29 @@ chinstrap_counts <- penguin_obs %>%
 head(chinstrap_counts)
 ```
 
-    ##   site_id species_id         citekey month day doy date year season  type
-    ## 1    ACUN       CHPE coria2011laurie    NA  NA  NA <NA> 2004   2004 nests
-    ## 2    FERG       CHPE coria2011laurie    NA  NA  NA <NA> 2004   2004 nests
-    ## 3    GEDD       CHPE coria2011laurie    NA  NA  NA <NA> 2004   2004 nests
-    ## 4    LOLA       CHPE coria2011laurie    NA  NA  NA <NA> 2004   2004 nests
-    ## 5    MILL       CHPE coria2011laurie    NA  NA  NA <NA> 2004   2004 nests
-    ## 6    PAND       CHPE woehlerpersonal    NA  NA  NA <NA> 2009   2009 nests
-    ##   presence count accuracy vantage           site_name               region
-    ## 1        1  7716        1  ground        Acuna Island South Orkney Islands
-    ## 2        1  7268        2  ground Ferguslie Peninsula South Orkney Islands
-    ## 3        1  7116        2  ground         Cape Geddes South Orkney Islands
-    ## 4        1   855        1  ground          Lola Point South Orkney Islands
-    ## 5        1   886        1  ground           Mill Cove South Orkney Islands
-    ## 6        1  2385        1  ground   Pandemonium Point South Orkney Islands
-    ##   ccamlr_id  latitude longitude
-    ## 1      48.2 -60.76120 -44.63700
-    ## 2      48.2 -60.69300 -44.56700
-    ## 3      48.2 -60.68500 -44.59000
-    ## 4      48.2 -60.72385 -44.74222
-    ## 5      48.2 -60.75300 -44.61400
-    ## 6      48.2 -60.73600 -45.64800
+```         
+##   site_id species_id         citekey month day doy date year season  type
+## 1    ACUN       CHPE coria2011laurie    NA  NA  NA <NA> 2004   2004 nests
+## 2    FERG       CHPE coria2011laurie    NA  NA  NA <NA> 2004   2004 nests
+## 3    GEDD       CHPE coria2011laurie    NA  NA  NA <NA> 2004   2004 nests
+## 4    GOPT       CHPE  lynnes2004diet    NA  NA  NA <NA> 2000   2000 nests
+## 5    GOPT       CHPE  lynnes2004diet    NA  NA  NA <NA> 2001   2001 nests
+## 6    LOLA       CHPE coria2011laurie    NA  NA  NA <NA> 2004   2004 nests
+##   presence count accuracy vantage           site_name               region
+## 1        1  7716        1  ground        Acuna Island South Orkney Islands
+## 2        1  7268        2  ground Ferguslie Peninsula South Orkney Islands
+## 3        1  7116        2  ground         Cape Geddes South Orkney Islands
+## 4        1  1440        1  ground       Gourlay Point South Orkney Islands
+## 5        1  1579        1  ground       Gourlay Point South Orkney Islands
+## 6        1   855        1  ground          Lola Point South Orkney Islands
+##   ccamlr_id  latitude longitude
+## 1      48.2 -60.76120 -44.63700
+## 2      48.2 -60.69300 -44.56700
+## 3      48.2 -60.68500 -44.59000
+## 4      48.2 -60.73090 -45.58630
+## 5      48.2 -60.73090 -45.58630
+## 6      48.2 -60.72385 -44.74222
+```
 
 You can also use spatial information to subset count data. This is quite
 easy using the `sf` [package
@@ -191,22 +211,24 @@ st_geometry(ACUN_area_counts) <- NULL
 glimpse(ACUN_area_counts)
 ```
 
-    ## Rows: 56
-    ## Columns: 14
-    ## $ site_id    <chr> "ACUN", "ACUN", "ACUN", "ACUN", "ACUN", "ACUN", "ACUN", "AI…
-    ## $ species_id <chr> "ADPE", "ADPE", "ADPE", "ADPE", "CHPE", "CHPE", "MCPE", "CH…
-    ## $ citekey    <chr> "coria2011laurie", "woehler1997status", "coria2011laurie", …
-    ## $ month      <int> NA, NA, NA, 2, 12, NA, NA, 12, 2, 12, 1, 12, 1, 12, NA, NA,…
-    ## $ day        <int> NA, NA, NA, 25, 28, NA, NA, 28, 10, 28, 22, 28, 22, 28, NA,…
-    ## $ doy        <int> NA, NA, NA, 56, 362, NA, NA, 362, 41, 362, 22, 362, 22, 362…
-    ## $ date       <date> NA, NA, NA, 2011-02-25, 1983-12-28, NA, NA, 1983-12-28, 20…
-    ## $ year       <int> 1993, 1994, 2004, 2011, 1983, 2004, 1993, 1983, 2020, 1983,…
-    ## $ season     <int> 1993, 1994, 2004, 2010, 1983, 2004, 1993, 1983, 2019, 1983,…
-    ## $ type       <chr> "nests", "nests", "nests", "nests", "nests", "nests", "nest…
-    ## $ presence   <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1,…
-    ## $ count      <int> 2008, 1920, 1880, 3079, 4000, 7716, 2, 6000, 3000, 3300, 30…
-    ## $ accuracy   <int> 1, 1, 1, 5, 4, 1, 1, 4, 5, 4, 5, 3, 5, 4, 2, 5, 1, 1, 4, 1,…
-    ## $ vantage    <chr> "ground", NA, "ground", "vhr", "ground", "ground", "ground"…
+```         
+## Rows: 56
+## Columns: 14
+## $ site_id    <chr> "ACUN", "ACUN", "ACUN", "ACUN", "ACUN", "ACUN", "ACUN", "AI…
+## $ species_id <chr> "ADPE", "ADPE", "ADPE", "ADPE", "CHPE", "CHPE", "MCPE", "CH…
+## $ citekey    <chr> "coria2011laurie", "woehler1997status", "coria2011laurie", …
+## $ month      <int> NA, NA, NA, 2, 12, NA, NA, 12, 2, 12, 1, 12, 1, 12, NA, NA,…
+## $ day        <int> NA, NA, NA, 25, 28, NA, NA, 28, 10, 28, 22, 28, 22, 28, NA,…
+## $ doy        <int> NA, NA, NA, 56, 362, NA, NA, 362, 41, 362, 22, 362, 22, 362…
+## $ date       <date> NA, NA, NA, 2011-02-25, 1983-12-28, NA, NA, 1983-12-28, 20…
+## $ year       <int> 1993, 1994, 2004, 2011, 1983, 2004, 1993, 1983, 2020, 1983,…
+## $ season     <int> 1993, 1994, 2004, 2010, 1983, 2004, 1993, 1983, 2019, 1983,…
+## $ type       <chr> "nests", "nests", "nests", "nests", "nests", "nests", "nest…
+## $ presence   <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1,…
+## $ count      <int> 2008, 1920, 1880, 3079, 4000, 7716, 2, 6000, 3000, 3300, 30…
+## $ accuracy   <int> 1, 1, 1, 5, 4, 1, 1, 4, 5, 4, 5, 3, 5, 4, 2, 5, 1, 1, 4, 1,…
+## $ vantage    <chr> "ground", NA, "ground", "vhr", "ground", "ground", "ground"…
+```
 
 #### Bibliographic Data
 
@@ -233,12 +255,14 @@ coria_citations <- persons %>%
 glimpse(coria_citations)
 ```
 
-    ## Rows: 9
-    ## Columns: 4
-    ## $ citekey <chr> "carlini2009responses", "coria1995breeding", "coria2011laurie"…
-    ## $ journal <chr> "Polar Biology", "Marine Ornithology", "Marine Ornithology", "…
-    ## $ doi     <chr> "10.1007/s00300-009-0637-y", NA, NA, NA, NA, "10.3402/polar.v3…
-    ## $ title   <chr> "Responses of Pygoscelis adeliae and P. papua populations to e…
+```         
+## Rows: 10
+## Columns: 4
+## $ citekey <chr> "carlini2009responses", "coria1995breeding", "coria2011laurie"…
+## $ journal <chr> "Polar Biology", "Marine Ornithology", "Marine Ornithology", "…
+## $ doi     <chr> "10.1007/s00300-009-0637-y", NA, NA, NA, NA, "10.3402/polar.v3…
+## $ title   <chr> "Responses of Pygoscelis adeliae and P. papua populations to e…
+```
 
 ``` r
 coria_counts <- penguin_obs %>%
@@ -246,20 +270,22 @@ coria_counts <- penguin_obs %>%
 head(coria_counts)
 ```
 
-    ##   site_id species_id                        citekey month day doy       date
-    ## 1    ACUN       ADPE                coria2011laurie    NA  NA  NA       <NA>
-    ## 2    ACUN       ADPE                coria2011laurie    NA  NA  NA       <NA>
-    ## 3    ACUN       CHPE                coria2011laurie    NA  NA  NA       <NA>
-    ## 4    ALCO       CHPE               favero2000status     1   5   5 1998-01-05
-    ## 5    ALCO       CHPE gonzalez-zevallos2013abundance     2   9  40 2011-02-09
-    ## 6    CHPT       CHPE               favero2000status     1   5   5 1998-01-05
-    ##   year season  type presence count accuracy vantage
-    ## 1 1993   1993 nests        1  2008        1  ground
-    ## 2 2004   2004 nests        1  1880        1  ground
-    ## 3 2004   2004 nests        1  7716        1  ground
-    ## 4 1998   1997 nests        1   605        2  ground
-    ## 5 2011   2010 nests        1  1100        1  ground
-    ## 6 1998   1997 nests        1    13        2  ground
+```         
+##   site_id species_id                        citekey month day doy       date
+## 1    ACUN       ADPE                coria2011laurie    NA  NA  NA       <NA>
+## 2    ACUN       ADPE                coria2011laurie    NA  NA  NA       <NA>
+## 3    ACUN       CHPE                coria2011laurie    NA  NA  NA       <NA>
+## 4    ALCO       CHPE               favero2000status     1   5   5 1998-01-05
+## 5    ALCO       CHPE gonzalez-zevallos2013abundance     2   9  40 2011-02-09
+## 6    CHPT       CHPE               favero2000status     1   5   5 1998-01-05
+##   year season  type presence count accuracy vantage
+## 1 1993   1993 nests        1  2008        1  ground
+## 2 2004   2004 nests        1  1880        1  ground
+## 3 2004   2004 nests        1  7716        1  ground
+## 4 1998   1997 nests        1   605        2  ground
+## 5 2011   2010 nests        1  1100        1  ground
+## 6 1998   1997 nests        1    13        2  ground
+```
 
 We could also easily print the full bibliographic information for these
 particular counts, as well as export them as a `.bibTeX` file. This file
@@ -271,15 +297,19 @@ out <- mapppd_bib[mapppd_bib$key %in% coria_citations$citekey]
 RefManageR::WriteBib(out, file = "~/Desktop/Coria_citations.bib")
 ```
 
-    ## Writing 9 Bibtex entries ... OK
-    ## Results written to file '~/Desktop/Coria_citations.bib'
+```         
+## Writing 10 Bibtex entries ... OK
+## Results written to file '~/Desktop/Coria_citations.bib'
+```
 
 ``` r
 print(out, .opts = list(bib.style = "authoryear", style = "markdown"))
 ```
 
-    ## Writing 9 Bibtex entries ... OK
-    ## Results written to file '~/Desktop/Coria_citations.bib'
+```         
+## Writing 10 Bibtex entries ... OK
+## Results written to file '~/Desktop/Coria_citations.bib'
+```
 
 Carlini, A. R., N. R. Coria, M. M. Santos, et al. (2009). “Responses of
 *Pygoscelis adeliae* and *P. papua* populations to environmental changes
@@ -319,6 +349,13 @@ Juáres, M. A., M. M. Santos, J. Negrete, et al. (2015). “Adélie penguin
 population changes at Stranger Point: 19 years of monitoring”. In:
 *Antarctic Science* 27.05, pp. 455-461. DOI:
 [10.1017/S0954102015000152](https://doi.org/10.1017%2FS0954102015000152).
+
+Perchivale, P. J., M. A. Juáres, M. M. Santos, et al. (2023). “Updated
+estimate of the breeding population of Adélie penguins (*Pygoscelis
+adeliae*) at Penguin Point, Marambio/Seymour Island within the proposed
+Weddell Sea Marine Protected Area”. In: *Researchsquare* preprint, pp.
+1-11. DOI:
+[10.21203/rs.3.rs-2117503/v2](https://doi.org/10.21203%2Frs.3.rs-2117503%2Fv2).
 
 Santos, M. M., J. T. Hinke, N. R. Coria, et al. (2018). “Abundance
 estimation of Adélie penguins at the Esperanza/Hope Bay mega colony”.
@@ -360,7 +397,9 @@ penmap("ADPE")
 ```
 
 <p align="center">
-<img src="vignettes/leaflet.png" width="50%" style="display: block; margin: auto;" />
+
+<img src="vignettes/leaflet.png" width="50%" style="display: block; margin: auto;"/>
+
 </p>
 
 <br>
