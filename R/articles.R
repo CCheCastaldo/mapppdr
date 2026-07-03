@@ -14,7 +14,7 @@
 #'   \item{end_page}{ending page of article}
 #'   \item{doi}{article doi, if available}
 #'   \item{url}{url link to article, if available}
-#'   \item{early_access}{boolean indicator that is TRUE if the article is currently early access and FALSE otherwise}
+#'   \item{preprint}{boolean indicator that is TRUE if the article is currently a preprint and FALSE otherwise}
 #'
 #' }
 #' @source \url{https://doi.org/10.3897/BDJ.11.e101476}
