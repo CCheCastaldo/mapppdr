@@ -57,14 +57,32 @@ penmap <- function(species_map = c("ADPE", "GEPE", "CHPE", "EMPE", "KIPE", "MCPE
     tidyr::pivot_wider(names_from = .data$species_id, values_from = .data$species_id) %>%
     tidyr::unite('species_id', species_map, sep = ', ', na.rm = TRUE)
   if (base::length(species_map) == 1) {
-    sites_to_map <- dplyr::inner_join(x = mapppdr::sites_sf, y = temp, by = "site_id") %>%
-      dplyr::mutate(label_id = paste0("<b><center>", .data$site_id, "</b>", "<br/>",
-        .data$site_name, "<br/></center>"))
+    sites_to_map <- dplyr::inner_join(x = mapppdr::sites_sf, y = temp, by = "site_id")
+    # site coordinates, used to build a link to the matching Google Earth location
+    # (the /web/search/ path drops a pin at the coordinates, unlike /web/@lat,lon,... which only moves the camera)
+    coords <- sf::st_coordinates(sites_to_map)
+    sites_to_map <- sites_to_map %>%
+      dplyr::mutate(
+        earth_link = paste0("https://earth.google.com/web/search/", coords[, 2], ",", coords[, 1]),
+        label_id = paste0("<b><center>",
+          '<a href="', .data$earth_link, '" target="_blank" rel="noopener noreferrer">', .data$site_id, '</a>',
+          "</b>", "<br/>",
+          .data$site_name,
+          "</center>"))
   }
   if (base::length(species_map) > 1) {
-    sites_to_map <- dplyr::inner_join(x = mapppdr::sites_sf, y = temp, by = "site_id") %>%
-      dplyr::mutate(label_id = paste0("<b><center>", .data$site_id, "</b>", "<br/>",
-        .data$site_name, "<br/>", .data$species_id, "</center>"))
+    sites_to_map <- dplyr::inner_join(x = mapppdr::sites_sf, y = temp, by = "site_id")
+    # site coordinates, used to build a link to the matching Google Earth location
+    # (the /web/search/ path drops a pin at the coordinates, unlike /web/@lat,lon,... which only moves the camera)
+    coords <- sf::st_coordinates(sites_to_map)
+    sites_to_map <- sites_to_map %>%
+      dplyr::mutate(
+        earth_link = paste0("https://earth.google.com/web/search/", coords[, 2], ",", coords[, 1]),
+        label_id = paste0("<b><center>",
+          '<a href="', .data$earth_link, '" target="_blank" rel="noopener noreferrer">', .data$site_id, '</a>',
+          "</b>", "<br/>",
+          .data$site_name, "<br/>", .data$species_id,
+          "</center>"))
   }
 
   # define map server for LIMA
