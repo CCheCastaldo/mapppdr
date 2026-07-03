@@ -37,8 +37,7 @@
 #' @importFrom grDevices topo.colors hcl.colors
 #' @importFrom leaflet leaflet leafletCRS leafletOptions setView addPolygons addScaleBar
 #' @importFrom leaflet colorFactor addCircleMarkers markerClusterOptions addLayersControl
-#' @importFrom leaflet layersControlOptions hideGroup addEasyButton easyButton
-#' @importFrom leaflet.esri addEsriTiledMapLayer
+#' @importFrom leaflet layersControlOptions hideGroup addEasyButton easyButton addTiles
 #' @importFrom htmlwidgets JS
 #' @importFrom rlang .data
 #' @import sf
@@ -132,7 +131,9 @@ penmap <- function(species_map = c("ADPE", "GEPE", "CHPE", "EMPE", "KIPE", "MCPE
     fillColor = ~factpal_mpa(mpa_id),
     group = "CCAMLR Marine Protected Areas (MPA)") %>%
   # add Landsat Image Mosaic Of Antarctica (LIMA) WMS tile
-  leaflet.esri::addEsriTiledMapLayer(tile_url, group = "Landsat Image Mosaic Of Antarctica (LIMA)") %>%
+  leaflet::addTiles(
+      urlTemplate = paste0(tile_url, "/tile/{z}/{y}/{x}"),
+      group = "Landsat Image Mosaic Of Antarctica (LIMA)")%>%
   # add penguin colonies
   leaflet::addCircleMarkers(
     data = sites_to_map,
