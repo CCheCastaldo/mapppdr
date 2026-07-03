@@ -5,3 +5,6 @@
 ^README.Rmd
 ^README.md
 ^create_symlinks\.R
+manuscript
+scratch
+^LICENSE\.md$
