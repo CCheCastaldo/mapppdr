@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # mapppdr
 
 [![version](https://img.shields.io/badge/version-3.0-yellow.svg)](https://github.com/CCheCastaldo/mapppdr/)
