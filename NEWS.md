@@ -1,24 +1,20 @@
-# mapppdr 3.0
+# v3.0 Release Notes
 
-This is the first update to the APBP database since that initial release. Please also cite this paper when using data from MAPPPD (<https://www.penguinmap.com>).
+## About this release
+
+Version 3.0 is the first update to the Antarctic Penguin Biogeography Project database and the `mapppdr` R package since:
+
+> Che-Castaldo C, Humphries G, Lynch H (2023) Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni and king penguin south of 60°S. *Biodiversity Data Journal* 11: e101476. https://doi.org/10.3897/BDJ.11.e101476
+
+Please cite this paper when using data from the `mapppdr` R package  or from MAPPPD (www.penguinmap.com).
 
 The APBP database is distributed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) (CC BY 4.0). 
 
 The code portion of the `mapppdr` package is distributed under a [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0) (GPL-3).
 
-**Please cite the paper below when using the `mapppdr` package:**
-
-> Che-Castaldo, C., G.R.W. Humphries, and H.J. Lynch. (2023). Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni and king penguin south of 60 S. *Biodiversity Data Journal* 11: e101476, <https://doi.org/10.3897/BDJ.11.e101476>
-
-## Database changes
-
 The following summarizes all substantive database changes since the initial commit (v2.3).
 
-### Schema changes
-
-- Renamed the `early_access` field in the `articles` data frame to `preprint` (indicates whether a citation is a preprint rather than early-access; code depending on the old column name will need to be updated).
-
-### New sites and site restructuring
+## New sites and site restructuring
 
 - Divided ASTR into four new sites: ASTE, DIAZ, ASTW, ASTS.
 - Added Bills Island (BILL) as a new gentoo penguin site, later with an initial count.
@@ -33,7 +29,7 @@ The following summarizes all substantive database changes since the initial comm
 - Deleted HUMM (Two Hummock Island East) as a site.
 - Added Nelly Island, based on the ASPA 160 management plan.
 
-### New data added
+## New data added
 
 - UAV/drone-based counts collected and annotated by Michael Wethington across multiple sites and seasons, including TAUN, YANK, SKET, YALO, ORNE, PCHA, and JOUG.
 - New 2022/23 and 2023/24 field season data, including NEKO, MOOT, and counts from the Herman & Flynn cruise (with a KETL chinstrap record from Strycker et al. removed as unreliable — see Corrections).
@@ -78,11 +74,15 @@ The following summarizes all substantive database changes since the initial comm
 - Fixed a mask associated with GALE, and updated LLAN and PTHO data.
 
 ## Package changes
-
+- Renamed the `early_access` field in the `articles` data frame to `preprint` to match APBP schema.
+- Added mapppd_db as git submodule to link and streamline SQL APBP tables being added to `mapppdr`.
+- Created symlinks script to create hard links from gitsubmodule into data folder for `mapppdr`.
+- Updated all package documentation to include references Che-Castaldo et al. 2023a,b and renaming MAPPPD -> APBP.
+- Added inline R code for data frame nrows to avoid mistakes.
 - Fixed a malformed `Authors@R` field in `DESCRIPTION` (a missing comma dropped Heather Lynch from the parsed author list).
 - Replaced `leaflet.esri::addEsriTiledMapLayer` with `leaflet::addTiles`.
 - Modernized package-level documentation in `R/mapppdr.R` to use the `"_PACKAGE"` sentinel instead of the deprecated `@docType package` tag.
 - Added `Config/mapppdr/data_commit` to `DESCRIPTION`, recording the public MAPPPD_source commit the `mapppdr` data frames were built from.
 - Added a `LICENSE.md` file with the full GPL-3 text, and updated `DESCRIPTION`'s `License` field to `GPL (>= 3)`.
+- Added split license to README.rmd, one for code and the other for the database itself
 - The site ID in each colony popup in `penmap()` is now a link that opens the site's coordinates in Google Earth in a new browser tab, with a pin dropped at the location.
-
