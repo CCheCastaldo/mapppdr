@@ -82,7 +82,7 @@ The following summarizes all substantive database changes since the initial comm
 - Fixed a malformed `Authors@R` field in `DESCRIPTION` (a missing comma dropped Heather Lynch from the parsed author list).
 - Replaced `leaflet.esri::addEsriTiledMapLayer` with `leaflet::addTiles`.
 - Modernized package-level documentation in `R/mapppdr.R` to use the `"_PACKAGE"` sentinel instead of the deprecated `@docType package` tag.
-- Added `Config/mapppdr/data_commit` to `DESCRIPTION`, recording the public MAPPPD_source commit the shipped data was built from (not the private mapppd_db submodule commit, which only relabels/repackages MAPPPD_source data without changing it).
+- Added `Config/mapppdr/data_commit` to `DESCRIPTION`, recording the public MAPPPD_source commit the `mapppdr` data frames were built from.
 - Added a `LICENSE.md` file with the full GPL-3 text, and updated `DESCRIPTION`'s `License` field to `GPL (>= 3)`.
 - The site ID in each colony popup in `penmap()` is now a link that opens the site's coordinates in Google Earth in a new browser tab, with a pin dropped at the location.
 
