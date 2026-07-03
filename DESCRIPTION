@@ -1,12 +1,17 @@
 Package: mapppdr
 Title: Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni and king penguin south of 60 S
-Version: 2.4
+Version: 3.0
 Authors@R: 
     c(person(given = "Christian",
            family = "Che-Castaldo",
            role = c("aut", "cre"),
            email = "che-castaldo@wisc.edu",
            comment = c(ORCID = "0000-0002-7670-2178")),
+      person(given = "Grant",
+           family = "Humphries",
+           role = "ctb",
+           email = "grwhumphries@blackbawks.net",
+           comment = c(ORCID = "0000-0001-5783-9892")),
       person(given = "Heather",
            family = "Lynch",
            role = "ctb",
@@ -14,18 +19,18 @@ Authors@R:
            comment = c(ORCID = "0000-0002-9026-1612")))
 Maintainer: Christian Che-Castaldo <che-castaldo@wisc.edu>
 Description: The Antarctic Penguin Biogeography Project (APBP) is an effort to collate all known information about the distribution and abundance of Antarctic penguins through time and to make such data available to the scientific and management community. The core data product involves a series of structured tables with information on known breeding sites and surveys conducted at those sites from the earliest days of Antarctic exploration through to the present. This database, which is continuously updated as new information becomes available, provides a unified and comprehensive repository of information on Antarctic penguin biogeography that contributes to a growing suite of applications of value to the Antarctic community.  One such application is the Mapping Application for Antarctic Penguins and Projected Dynamics (MAPPPD; www.penguinmap.com), a browser-based search and visualization tool designed specifically for the management community and other non-specialists, and as a Darwin Core archive distributed through the Ocean Biodiversity Information System (OBIS) and Global Biodiversity Information Facility (GBIF) clearing houses. The mapppdr R package makes this database more easily available to the scientific community by providing its tables as data frames (one with simple features), along with the BibTeX citation data as a bibentry object and a function for visualizing penguin breeding colony locations using leaflet. The Antarctic Penguin Biogeography Project has been funded by the National Aeronautics and Space Administration (NASA), the Pew Fellowship for Marine Conservation, and the Institute for Advanced Computational Science at Stony Brook University.
-License: GPL-3
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
+Config/mapppdr/data_commit: 4041d36
 Imports: 
     magrittr (>= 2.0),
     tidyr (>= 1.3.0),
     dplyr (>= 1.1.0),
     htmlwidgets (>= 1.6.0),
     leaflet (>= 2.1.0),
-    leaflet.esri (>= 1.0.0),
     sf (>= 1.0),
     rlang
 Depends: 

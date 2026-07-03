@@ -5,7 +5,7 @@
 \alias{articles}
 \title{Citation information for journal articles referenced in the APBP database}
 \format{
-A data frame with 90 rows and 10 variables:
+A data frame with 101 rows and 10 variables:
 \describe{
 \item{citekey}{unique identifier for each citation}
 \item{title}{article title}
@@ -16,7 +16,7 @@ A data frame with 90 rows and 10 variables:
 \item{end_page}{ending page of article}
 \item{doi}{article doi, if available}
 \item{url}{url link to article, if available}
-\item{early_access}{boolean indicator that is TRUE if the article is currently early access and FALSE otherwise}
+\item{preprint}{boolean indicator that is TRUE if the article is currently a preprint and FALSE otherwise}
 
 }
 }

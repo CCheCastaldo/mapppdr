@@ -5,7 +5,7 @@
 \alias{sites}
 \title{Name and location of APBP database seabird breeding sites}
 \format{
-A data frame with 720 rows and 6 variables:
+A data frame with 729 rows and 6 variables:
 \describe{
 \item{site_id}{unique identifier for each site}
 \item{site_name}{site name and/or description}
