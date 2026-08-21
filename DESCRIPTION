@@ -1,6 +1,6 @@
 Package: mapppdr
 Title: Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni and king penguin south of 60 S
-Version: 3.0
+Version: 3.1
 Authors@R: 
     c(person(given = "Christian",
            family = "Che-Castaldo",
@@ -24,7 +24,7 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-Config/mapppdr/data_commit: 4041d36
+Config/mapppdr/data_commit: 56ceb0ec
 Imports: 
     magrittr (>= 2.0),
     tidyr (>= 1.3.0),

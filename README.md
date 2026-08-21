@@ -1,6 +1,6 @@
 # mapppdr
 
-[![version](https://img.shields.io/badge/version-3.0-yellow.svg)](https://github.com/CCheCastaldo/mapppdr/)
+[![version](https://img.shields.io/badge/version-3.1-yellow.svg)](https://github.com/CCheCastaldo/mapppdr/)
 [![CC BY
 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/)
 [![License: GPL

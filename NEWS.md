@@ -1,8 +1,32 @@
+# v3.1 Release Notes
+
+## About this release
+
+Please cite this paper when using data from this database or from MAPPPD (www.penguinmap.com).
+
+> Che-Castaldo C, Humphries G, Lynch H (2023) Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni and king penguin south of 60°S. *Biodiversity Data Journal* 11: e101476. https://doi.org/10.3897/BDJ.11.e101476
+
+This database is distributed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) (CC BY 4.0). The versioned dataset is additionally citable via SCAR-AntOBIS:
+
+> Che-Castaldo C, Humphries GRW, Lynch HJ, Van de Putte A (2023) Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni, and king penguin south of 60°S. Version 2.3. SCAR-AntOBIS. Sampling event dataset. https://doi.org/10.48361/zftxkr
+
+The Darwin Core Archive distributed to GBIF and OBIS via the SCAR Antarctic Biodiversity Portal reflects Version 2.3 and does not yet incorporate the changes described below; a corresponding archive update will follow under separate versioning.
+
+The following summarizes all substantive database changes since v3.0.
+
+## Corrections and removals
+
+- Restored 309 corrupted vantage values in ADPE_data_global.csv introduced in v3.0
+
+**Full Changelog**: https://github.com/CCheCastaldo/MAPPPD_source/compare/v3.0...v3.1
+
 # v3.0 Release Notes
 
 ## About this release
 
 Version 3.0 is the first update to the Antarctic Penguin Biogeography Project database and the `mapppdr` R package since:
+
+Please cite this paper when using data from the `mapppdr` R package or from MAPPPD (www.penguinmap.com).
 
 > Che-Castaldo C, Humphries G, Lynch H (2023) Antarctic Penguin Biogeography Project: Database of abundance and distribution for the Adélie, chinstrap, gentoo, emperor, macaroni and king penguin south of 60°S. *Biodiversity Data Journal* 11: e101476. <https://doi.org/10.3897/BDJ.11.e101476>
 
